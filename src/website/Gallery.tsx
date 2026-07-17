@@ -535,6 +535,73 @@ const Gallery: React.FC = () => {
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-15.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
+        },
+
+        {
+            id: 117,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-01.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Community Cleanup"
+        },
+        {
+            id: 118,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-02.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Community Cleanup"
+        },
+        {
+            id: 119,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-03.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Community Cleanup"
+        },
+        {
+            id: 120,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-04.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Community Cleanup"
+        },
+        {
+            id: 121,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-05.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Community Cleanup"
+        },
+        {
+            id: 122,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-06.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Community Cleanup"
+        },
+        {
+            id: 123,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-07.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Community Cleanup"
+        },
+        {
+            id: 124,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-08.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Community Cleanup"
+        },
+        {
+            id: 125,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-09.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Community Cleanup"
+        },
+        {
+            id: 126,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-10.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Community Cleanup"
+        },
+        {
+            id: 127,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-11.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Community Cleanup"
         }
     ];
 
