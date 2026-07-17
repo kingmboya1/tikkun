@@ -18,6 +18,22 @@ const Gallery: React.FC = () => {
 
     const [orientations, setOrientations] = useState<Record<number, 'landscape' | 'portrait'>>({});
 
+    const bannerSlides = [
+        `${process.env.PUBLIC_URL}/assets/images/gallery.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-09.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-15.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-06.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-01.jpg`,
+    ];
+    const [bannerSlide, setBannerSlide] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setBannerSlide(prev => (prev + 1) % bannerSlides.length);
+        }, 4000);
+        return () => clearInterval(timer);
+    }, [bannerSlides.length]);
+
     const galleryItems: GalleryItem[] = [
         {
             id: 4,
@@ -428,6 +444,97 @@ const Gallery: React.FC = () => {
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth4.jpg`,
             categories: ['Organization and Capacity Building'],
             alt: "Women"
+        },
+
+        {
+            id: 102,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-01.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 103,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-02.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 104,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-03.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 105,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-04.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 106,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-05.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 107,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-06.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 108,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-07.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 109,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-08.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 110,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-09.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 111,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-10.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 112,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-11.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 113,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-12.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 114,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-13.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 115,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-14.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
+        },
+        {
+            id: 116,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-15.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Jasmin Girls Empowerment"
         }
     ];
 
@@ -476,7 +583,17 @@ const Gallery: React.FC = () => {
             <Search />
 
             <section className="page-banner">
-                <div className="image-layer" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/gallery.jpg)` }}></div>
+                {bannerSlides.map((slide, index) => (
+                    <div
+                        key={slide}
+                        className="image-layer"
+                        style={{
+                            backgroundImage: `url(${slide})`,
+                            opacity: index === bannerSlide ? 1 : 0,
+                            transition: 'opacity 1.5s ease-in-out',
+                        }}
+                    ></div>
+                ))}
                 <div className="bottom-rotten-curve"></div>
 
                 <div className="auto-container">
