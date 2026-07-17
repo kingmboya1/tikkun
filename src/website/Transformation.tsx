@@ -170,7 +170,54 @@ const Transformation: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> 
+            
+            {/* Impact Story Section */}
+                <section style={{ padding: '80px 0', background: '#f8f9fa' }}>
+                    <div className="auto-container">
+                        <span style={{
+                            display: 'inline-block',
+                            padding: '8px 20px',
+                            backgroundColor: 'rgba(46,125,50,0.1)',
+                            color: '#2e7d32',
+                            borderRadius: '25px',
+                            fontSize: '14px',
+                            fontWeight: 600,
+                            marginBottom: '15px'
+                        }}>
+                            Impact Story
+                        </span>
+                        <h2 style={{ fontSize: '36px', fontWeight: 700, marginBottom: '20px' }}>
+                            Celebrating International Women's Day 2025
+                        </h2>
+                        <p style={{ fontSize: '18px', lineHeight: 1.7, color: '#555', maxWidth: '800px', marginBottom: '30px' }}>
+                            Celebrating International Women's Day 2025 with a theme dear to our vision, "Accelerate Action," Tikkun provides a platform for ALL women and girls to access Transformative Education and Empowerment. We hosted successful sessions for women and teenage mothers from underprivileged communities. These sessions had both direct and indirect impact in the community.
+                        </p>
+                        <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>
+                            Direct Impact
+                        </h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '25px' }}>
+                            <div style={{ background: '#fff', borderRadius: '20px', padding: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
+                                <h4 style={{ fontSize: '18px', marginBottom: '10px' }}>Access to Education</h4>
+                                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#555' }}>
+                                    Training in financial skills, entrepreneurship, and life skills that build resilience and promote inclusion within the community, while finding a niche to work well with male allies.
+                                </p>
+                            </div>
+                            <div style={{ background: '#fff', borderRadius: '20px', padding: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
+                                <h4 style={{ fontSize: '18px', marginBottom: '10px' }}>Confidence & Guidance</h4>
+                                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#555' }}>
+                                    Empowering women, especially young teenage mothers, to build confidence in decision-making, and granting them information to access proper health care services.
+                                </p>
+                            </div>
+                            <div style={{ background: '#fff', borderRadius: '20px', padding: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
+                                <h4 style={{ fontSize: '18px', marginBottom: '10px' }}>Role Models & Peer Networks</h4>
+                                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#555' }}>
+                                    Mapping participants with role models and building peer-to-peer networks for support and further engagement, strengthening communities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
             {/* CTA Section */}
             <section style={{
