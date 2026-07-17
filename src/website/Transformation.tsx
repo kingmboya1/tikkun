@@ -219,6 +219,75 @@ const Transformation: React.FC = () => {
                     </div>
                 </section>
 
+                {/* Impact Story: Mgandini Primary School */}
+                <section style={{ padding: '80px 0', background: '#fff' }}>
+                    <div className="auto-container">
+                        <span style={{
+                            display: 'inline-block',
+                            padding: '8px 20px',
+                            backgroundColor: 'rgba(46,125,50,0.1)',
+                            color: '#2e7d32',
+                            borderRadius: '25px',
+                            fontSize: '14px',
+                            fontWeight: 600,
+                            marginBottom: '15px'
+                        }}>
+                            Impact Story
+                        </span>
+                        <h2 style={{ fontSize: '36px', fontWeight: 700, marginBottom: '20px' }}>
+                            Supporting National Exam Candidates in Kinango
+                        </h2>
+                        <p style={{ fontSize: '18px', lineHeight: 1.7, color: '#555', maxWidth: '800px', marginBottom: '30px' }}>
+                            On 11th July 2026, Tikkun Africa Foundation, in collaboration with Yasmin Girl Empowerment and Global Ministries For Christ Church, visited Mgandini Primary School in Kinango, Kwale County, one of the sub-county's marginalized regions. The initiative supported Grade 6 and Grade 9 pupils preparing for their National Examinations in October 2026, ensuring their mental state is settled through the provision of basic needs and bridging the gap of absenteeism for girls during their menstrual cycle.
+                        </p>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '25px', marginBottom: '40px' }}>
+                            <div style={{ background: '#f8f9fa', borderRadius: '20px', padding: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
+                                <h4 style={{ fontSize: '18px', marginBottom: '10px' }}>Sanitary Pads</h4>
+                                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#555' }}>
+                                    180 girls received 2 pads each, totaling 360 pads distributed.
+                                </p>
+                            </div>
+                            <div style={{ background: '#f8f9fa', borderRadius: '20px', padding: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
+                                <h4 style={{ fontSize: '18px', marginBottom: '10px' }}>Underwear</h4>
+                                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#555' }}>
+                                    170 boys received 2 pieces each, totaling 340 pieces distributed.
+                                </p>
+                            </div>
+                            <div style={{ background: '#f8f9fa', borderRadius: '20px', padding: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
+                                <h4 style={{ fontSize: '18px', marginBottom: '10px' }}>Life Skills Sessions</h4>
+                                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#555' }}>
+                                    Sessions on menstrual health, discipline, behavior, life skills, children's rights, and access to protection services, led by trained Menstrual Health Champions, educators, a pastor, and guidance and counseling officials.
+                                </p>
+                            </div>
+                        </div>
+                        <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>
+                            Aligned with the UN Sustainable Development Goals
+                        </h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px' }}>
+                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                <span style={{ color: '#2e7d32', fontWeight: 700 }}>SDG 3</span>
+                                <p style={{ fontSize: '15px', color: '#555', margin: 0 }}>Good Health & Well-being — mental health, life skills, and menstrual health through sanitary pad provision.</p>
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                <span style={{ color: '#2e7d32', fontWeight: 700 }}>SDG 4</span>
+                                <p style={{ fontSize: '15px', color: '#555', margin: 0 }}>Quality Education — supporting exam candidates by reducing barriers to attendance and concentration.</p>
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                <span style={{ color: '#2e7d32', fontWeight: 700 }}>SDG 5</span>
+                                <p style={{ fontSize: '15px', color: '#555', margin: 0 }}>Gender Equality — empowering girls through menstrual dignity and boys through equitable support.</p>
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                <span style={{ color: '#2e7d32', fontWeight: 700 }}>SDG 6</span>
+                                <p style={{ fontSize: '15px', color: '#555', margin: 0 }}>Clean Water & Sanitation — advocacy for access to facilities and hygiene resources.</p>
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                <span style={{ color: '#2e7d32', fontWeight: 700 }}>SDG 17</span>
+                                <p style={{ fontSize: '15px', color: '#555', margin: 0 }}>Partnerships for the Goals — collaboration with Yasmin Girl Empowerment, Global Ministries For Christ, and other stakeholders.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             {/* CTA Section */}
             <section style={{
                 padding: '80px 0',

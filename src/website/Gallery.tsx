@@ -238,12 +238,6 @@ const Gallery: React.FC = () => {
             categories: ['Transformative Education & Empowerment'],
             alt: "Tollen"
         },
-        {
-            id: 32,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_9.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
-        },
 
         {
             id: 42,
