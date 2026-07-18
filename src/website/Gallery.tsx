@@ -663,6 +663,13 @@ const Gallery: React.FC = () => {
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-11.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Tree Planting Drive"
+        },
+
+        {
+            id: 139,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/together-we-are-stronger.png`,
+            categories: ['Networking and Partnerships'],
+            alt: "Together, we are stronger"
         }
     ];
 
