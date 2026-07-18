@@ -88,22 +88,8 @@ const Gallery: React.FC = () => {
         },
 
         {
-            id: 36,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_4.jpg`,
-            categories: ['Climate Action & Renewable Energy'],
-            alt: "Climate Action & Renewable Energy"
-        },
-
-        {
             id: 37,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_5.jpg`,
-            categories: ['Climate Action & Renewable Energy'],
-            alt: "Climate Action & Renewable Energy"
-        },
-
-        {
-            id: 38,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_6.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Climate Action & Renewable Energy"
         },
@@ -136,12 +122,6 @@ const Gallery: React.FC = () => {
             alt: "Climate Action & Renewable Energy"
         },
 
-        {
-            id: 10,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/capacity_1.jpg`,
-            categories: ['Organization Capacity Building'],
-            alt: "Organization Capacity Building"
-        },
         {
             id: 12,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening_1.jpg`,
@@ -205,12 +185,6 @@ const Gallery: React.FC = () => {
         {
             id: 26,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_3.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
-        },
-        {
-            id: 27,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_4.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Tollen"
         },
@@ -378,34 +352,6 @@ const Gallery: React.FC = () => {
         },
 
         {
-            id: 93,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community_1.jpg`,
-            categories: ['Networking and Partnerships'],
-            alt: "Women"
-        },
-
-        {
-            id: 94,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community_2.jpg`,
-            categories: ['Networking and Partnerships'],
-            alt: "Women"
-        },
-
-        {
-            id: 95,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community_5.jpg`,
-            categories: ['Networking and Partnerships'],
-            alt: "Women"
-        },
-
-        {
-            id: 96,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community_4.jpg`,
-            categories: ['Networking and Partnerships'],
-            alt: "Women"
-        },
-
-        {
             id: 97,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community_3.jpg`,
             categories: ['Networking and Partnerships'],
@@ -429,13 +375,6 @@ const Gallery: React.FC = () => {
         {
             id: 100,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth3.jpg`,
-            categories: ['Organization and Capacity Building'],
-            alt: "Women"
-        },
-
-        {
-            id: 101,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth4.jpg`,
             categories: ['Organization and Capacity Building'],
             alt: "Women"
         },
