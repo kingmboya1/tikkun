@@ -596,6 +596,73 @@ const Gallery: React.FC = () => {
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-11.jpg`,
             categories: ['Behavior Change Catch Up'],
             alt: "Community Cleanup"
+        },
+
+        {
+            id: 128,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-01.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Tree Planting Drive"
+        },
+        {
+            id: 129,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-02.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Tree Planting Drive"
+        },
+        {
+            id: 130,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-03.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Tree Planting Drive"
+        },
+        {
+            id: 131,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-04.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Tree Planting Drive"
+        },
+        {
+            id: 132,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-05.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Tree Planting Drive"
+        },
+        {
+            id: 133,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-06.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Tree Planting Drive"
+        },
+        {
+            id: 134,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-07.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Tree Planting Drive"
+        },
+        {
+            id: 135,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-08.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Tree Planting Drive"
+        },
+        {
+            id: 136,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-09.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Tree Planting Drive"
+        },
+        {
+            id: 137,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-10.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Tree Planting Drive"
+        },
+        {
+            id: 138,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-11.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Tree Planting Drive"
         }
     ];
 
