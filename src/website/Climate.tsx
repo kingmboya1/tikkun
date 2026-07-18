@@ -294,6 +294,107 @@ const Climate: React.FC = () => {
                 </div>
             </section>
 
+            {/* Impact Story - Tree Planting */}
+            <section style={{
+                padding: '80px 0',
+                background: '#fff',
+            }}>
+                <div className="auto-container">
+                    <div style={{
+                        background: '#fff',
+                        borderRadius: '20px',
+                        padding: '50px',
+                        boxShadow: '0 10px 40px rgba(0,0,0,0.08)',
+                        border: '1px solid #f0f0f0',
+                    }}>
+                        <span style={{
+                            display: 'inline-block',
+                            padding: '8px 20px',
+                            backgroundColor: 'rgba(46,125,50,0.1)',
+                            color: '#2e7d32',
+                            borderRadius: '25px',
+                            fontSize: '14px',
+                            fontWeight: 600,
+                            marginBottom: '20px',
+                            width: 'fit-content',
+                        }}>Impact Story</span>
+                        <div style={{
+                            width: '100%',
+                            height: '320px',
+                            borderRadius: '16px',
+                            overflow: 'hidden',
+                            marginBottom: '25px',
+                        }}>
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/images/tree-planting-2025.jpg`}
+                                alt="Together we are stronger — community unity graphic for the tree planting initiative"
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'contain',
+                                    backgroundColor: '#f8f9fa',
+                                }}
+                            />
+                        </div>
+                        <h2 style={{
+                            fontSize: '32px',
+                            fontWeight: 700,
+                            color: '#1a1a2e',
+                            marginBottom: '10px',
+                        }}>Growing Trees and Building Strong Partnerships</h2>
+                        <p style={{
+                            fontSize: '16px',
+                            color: '#888',
+                            marginBottom: '25px',
+                        }}>1st May 2025</p>
+                        <div style={{ fontSize: '16px', color: '#444', lineHeight: 1.8 }}>
+                            <p style={{ marginBottom: '20px' }}>Aligning to SDG 13 on Climate Action and to Kenya's National Vision of
+                                planting and growing 15 billion trees by the year 2032, this initiative shows
+                                that meaningful progress toward that target is achievable through small
+                                actions like these. Tikkun Africa Foundation complements the environmental
+                                restoration strategy led by the Government.</p>
+                            <p style={{ marginBottom: '20px' }}>Through collaboration with Kenyan Administration Chiefs at DO's Camps, we
+                                embed tree growing into community leadership structures, ensuring that the
+                                President's directive on tree planting becomes a testimony.</p>
+                            <p style={{ marginBottom: '20px' }}>Inclusivity initiatives always bring accountability and thrive through
+                                collaboration. Women, men, and youth assist in mobilization and in creating
+                                awareness through their digital platforms for sensitization and execution.</p>
+                            <p style={{ marginBottom: '20px' }}>Local leadership also offers accountability and sustainability. The Kaburu
+                                Beauty and Salon, along with other businesses, support vulnerable groups
+                                while advancing environmental goals. By planting trees, we are planting hope,
+                                equity, and opportunity. Each seedling represents a step toward achieving
+                                Kenya's National Climate Change Action Plan and the Sustainable Development
+                                Goals (SDGs):</p>
+                            <p style={{ marginBottom: '20px' }}>SDG 13: Climate Action – mitigating climate change through reforestation.<br />
+                                SDG 15: Life on Land – protecting ecosystems and biodiversity.<br />
+                                SDG 17: Partnerships for the Goals – building strong alliances for
+                                sustainable impact.</p>
+                            <p style={{ marginBottom: '20px' }}>This program is not only about restoring forests — it is about uplifting
+                                vulnerable groups, creating livelihoods, and fostering resilience.</p>
+                        </div>
+                        <div style={{ marginTop: '30px' }}>
+                            <h4 style={{ fontSize: '16px', fontWeight: 600, color: '#1a1a2e', marginBottom: '15px' }}>Aligned with the Sustainable Development Goals</h4>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                                {[
+                                    { code: 'SDG 13', label: 'Climate Action' },
+                                    { code: 'SDG 15', label: 'Life on Land' },
+                                    { code: 'SDG 17', label: 'Partnerships for the Goals' },
+                                ].map((sdg, i) => (
+                                    <span key={i} style={{
+                                        backgroundColor: '#2e7d32',
+                                        color: '#fff',
+                                        padding: '8px 16px',
+                                        borderRadius: '20px',
+                                        fontSize: '13px',
+                                        fontWeight: 600,
+                                    }}>{sdg.code}: {sdg.label}</span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* CTA Section */}
             <section style={{
                 padding: '80px 0',
