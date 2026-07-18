@@ -172,6 +172,128 @@ const Climate: React.FC = () => {
                 </div>
             </section>
 
+            {/* Impact Story */}
+            <section style={{
+                padding: '80px 0',
+                background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
+            }}>
+                <div className="auto-container">
+                    <div style={{
+                        background: '#fff',
+                        borderRadius: '20px',
+                        padding: '50px',
+                        boxShadow: '0 10px 40px rgba(0,0,0,0.08)',
+                    }}>
+                        <span style={{
+                            display: 'inline-block',
+                            padding: '8px 20px',
+                            backgroundColor: 'rgba(46,125,50,0.1)',
+                            color: '#2e7d32',
+                            borderRadius: '25px',
+                            fontSize: '14px',
+                            fontWeight: 600,
+                            marginBottom: '20px',
+                            width: 'fit-content',
+                        }}>Impact Story</span>
+                        <div style={{
+                            width: '100%',
+                            height: '320px',
+                            borderRadius: '16px',
+                            overflow: 'hidden',
+                            marginBottom: '25px',
+                        }}>
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/images/world-environment-day-2026.jpg`}
+                                alt="Volunteers and community members celebrating World Environment Day 2026 on Mayor Road"
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover',
+                                }}
+                            />
+                        </div>
+                        <h2 style={{
+                            fontSize: '32px',
+                            fontWeight: 700,
+                            color: '#1a1a2e',
+                            marginBottom: '10px',
+                        }}>World Environment Day 2026</h2>
+                        <p style={{
+                            fontSize: '16px',
+                            color: '#888',
+                            marginBottom: '25px',
+                        }}>June 2026 &middot; Mayor Road Community</p>
+                        <div style={{ fontSize: '16px', color: '#444', lineHeight: 1.8 }}>
+                            <p style={{ marginBottom: '20px' }}>In June 2026, Tikkun Africa Foundation joined residents of Mayor Road,
+                                together with Multilink Express Kenya Ltd and Global Ministries For Christ
+                                Church, to celebrate World Environment Day through hands-on environmental
+                                restoration work.</p>
+                            <p style={{ marginBottom: '20px' }}>Youth studying environmental subjects at their respective colleges took part
+                                as a practical extension of their coursework, working alongside mobilized
+                                women, men, religious leaders, and residents. Together, the group cleared
+                                roadside vegetation and trimmed overgrown trees that had begun to encroach on
+                                the road — a hazard to pedestrians, motorcyclists, and vehicles alike, and a
+                                breeding ground for mosquitoes and other pests. Clearing this overgrowth also
+                                reopened safe play space for neighborhood children.</p>
+                            <p style={{ marginBottom: '20px' }}>Collected waste was disposed of responsibly, in line with environmental safety
+                                standards. The initiative reflects the strength of community partnerships
+                                working toward a shared goal, and reinforces the cleanliness and civic pride
+                                that residents already hold as part of their everyday household norms.</p>
+                        </div>
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(2, 1fr)',
+                            gap: '20px',
+                            margin: '30px 0',
+                        }}>
+                            <div style={{
+                                background: '#f8f9fa',
+                                borderRadius: '12px',
+                                padding: '20px',
+                                textAlign: 'center',
+                            }}>
+                                <div style={{ fontSize: '28px', fontWeight: 700, color: '#2e7d32' }}>15+</div>
+                                <div style={{ fontSize: '14px', color: '#666' }}>Volunteers &amp; neighboring households</div>
+                            </div>
+                            <div style={{
+                                background: '#f8f9fa',
+                                borderRadius: '12px',
+                                padding: '20px',
+                                textAlign: 'center',
+                            }}>
+                                <div style={{ fontSize: '28px', fontWeight: 700, color: '#2e7d32' }}>3</div>
+                                <div style={{ fontSize: '14px', color: '#666' }}>Partner organizations</div>
+                            </div>
+                        </div>
+                        <div style={{ marginTop: '30px' }}>
+                            <h4 style={{ fontSize: '16px', fontWeight: 600, color: '#1a1a2e', marginBottom: '15px' }}>Aligned with the Sustainable Development Goals</h4>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '20px' }}>
+                                {[
+                                    { code: 'SDG 11', label: 'Sustainable Cities and Communities' },
+                                    { code: 'SDG 13', label: 'Climate Action' },
+                                    { code: 'SDG 15', label: 'Life on Land' },
+                                ].map((sdg, i) => (
+                                    <span key={i} style={{
+                                        backgroundColor: '#2e7d32',
+                                        color: '#fff',
+                                        padding: '8px 16px',
+                                        borderRadius: '20px',
+                                        fontSize: '13px',
+                                        fontWeight: 600,
+                                    }}>{sdg.code}: {sdg.label}</span>
+                                ))}
+                            </div>
+                            <p style={{ fontSize: '14px', color: '#666', lineHeight: 1.7 }}>
+                                <strong>GRI 413 (Local Communities):</strong> The event demonstrated strong
+                                community engagement, mobilizing 15 volunteers and neighboring households
+                                alongside three partner organizations — evidence of cleanliness and
+                                environmental stewardship as an established social norm within the community.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* CTA Section */}
             <section style={{
                 padding: '80px 0',
