@@ -25,15 +25,15 @@ const Climate: React.FC = () => {
             {/* Hero Banner */}
             <section style={{
                 position: 'relative',
-                height: '500px',
+                height: '600px',
                 overflow: 'hidden',
             }}>
                 <div style={{
                     position: 'absolute',
                     inset: 0,
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/climate.jpg)`,
+                    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/climate-hero-2026.jpg)`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center',
+                    backgroundPosition: 'center 40%',
                 }}></div>
                 <div style={{
                     position: 'absolute',
