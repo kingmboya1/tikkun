@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react'
+import { Link } from 'react-router-dom'
 import Headers from "../layouts/Headers";
 import Search from "../layouts/Search";
 import Footer from "../layouts/Footer";
+import { events } from '../data/events';
 
 
 const Events: React.FC = () => {
@@ -34,61 +36,29 @@ const Events: React.FC = () => {
                     <div className="auto-container">
 
                         <div className="row clearfix">
-
-
-                            <div className="event-block-three col-lg-4 col-md-6 col-sm-12">
-                                <div className="inner-box wow fadeInUp" data-wow-delay="0ms">
-                                    <div className="image-box">
-                                        <figure className="image"><a href="#"><img
-                                            src={`${process.env.PUBLIC_URL}/assets/images/labor.jpg`} alt=""/></a></figure>
-
-                                    </div>
-                                    <div className="lower-content">
-                                        <h3><a href="#">Plant a tree <br/> This Labor day!</a></h3>
-                                        <ul className="info clearfix">
-                                            <li><span className="icon far fa-clock"></span> 10.00 AM - 12.00 PM</li>
-                                            <li><span className="icon fa fa-map-marker-alt"></span> Ongata Rongai Primary School</li>
-                                            <li><span className="icon fa fa-map-marker-alt"></span> Nkaimurunya Chief's Camp</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="event-block-three col-lg-4 col-md-6 col-sm-12">
-                                <div className="inner-box wow fadeInUp" data-wow-delay="0ms">
-                                    <div className="image-box">
-                                        <figure className="image"><a href="#"><img
-                                            src={`${process.env.PUBLIC_URL}/assets/images/June.jpg`} alt=""/></a></figure>
-
-                                    </div>
-                                    <div className="lower-content">
-                                        <h3><a href="#">Cleanup Exercise!</a></h3>
-                                        <ul className="info clearfix">
-                                            <li><span className="icon far fa-clock"></span> 9.00 AM - 12.00 PM</li>
-                                            <li><span className="icon fa fa-map-marker-alt"></span> Mayor Road, Ongata Rongai</li>
-                                            <li><span className="icon fa fa-map-marker-alt"></span> Nkaimurunya Chief's Camp</li>
-                                        </ul>
+                            {events.map((event) => (
+                                <div key={event.id} className="event-block-three col-lg-4 col-md-6 col-sm-12">
+                                    <div className="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                        <div className="image-box">
+                                            <figure className="image">
+                                                <Link to={`/events/${event.id}`}>
+                                                    <img src={`${process.env.PUBLIC_URL}/${event.image}`} alt={event.title} />
+                                                </Link>
+                                            </figure>
+                                        </div>
+                                        <div className="lower-content">
+                                            <h3><Link to={`/events/${event.id}`}>{event.title}</Link></h3>
+                                            <ul className="info clearfix">
+                                                <li><span className="icon far fa-calendar-alt"></span> {event.date}</li>
+                                                <li><span className="icon fa fa-map-marker-alt"></span> {event.location}</li>
+                                                {event.extra && (
+                                                    <li><span className="icon fa fa-users"></span> {event.extra}</li>
+                                                )}
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className="event-block-three col-lg-4 col-md-6 col-sm-12">
-                                <div className="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                    <div className="image-box">
-                                        <figure className="image"><a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/donate-sanitary-towels-2026.jpg`} alt="Donate Sanitary Towels - Empower Girls in Kinango Sub County" /></a></figure>
-                                    </div>
-                                    <div className="lower-content">
-                                        <h3><a href="#">Donate Sanitary Towels: Empower Girls in Kinango</a></h3>
-                                        <ul className="info clearfix">
-                                            <li><span className="icon far fa-calendar-alt"></span>11th &amp; 18th July 2026</li>
-                                            <li><span className="icon fa fa-map-marker-alt"></span>Kinango Sub County, Kwale County</li>
-                                            <li><span className="icon fa fa-users"></span>Target: 1,000 Girls</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-
+                            ))}
                         </div>
 
                     </div>

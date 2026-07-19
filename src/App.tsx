@@ -12,6 +12,7 @@ const DonateSuccess = lazy(() => import('./website/DonateSuccess'));
 const Gallery = lazy(() => import('./website/Gallery'));
 const Partners = lazy(() => import('./website/Partners'));
 const Events = lazy(() => import('./website/Events'));
+const EventDetail = lazy(() => import('./website/EventDetail'));
 const Dashboard = lazy(() => import('./dashboard/Dashboard'));
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                     <Route path={"/gallery"} element={<Gallery />} />
                     <Route path={"/partners"} element={<Partners />} />
                     <Route path={"/events"} element={<Events />} />
+                    <Route path={"/events/:id"} element={<EventDetail />} />
                     <Route path={"/dashboard/*"} element={<Dashboard />} />
                 </Routes>
             </Suspense>
