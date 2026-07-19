@@ -80,24 +80,6 @@ const EventDetail: React.FC = () => {
                     flexDirection: 'column',
                     justifyContent: 'center',
                 }}>
-                    {/* Back link */}
-                    <Link to="/events" style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                        padding: '8px 20px',
-                        backgroundColor: 'rgba(255,255,255,0.15)',
-                        color: '#fff',
-                        borderRadius: '25px',
-                        textDecoration: 'none',
-                        fontSize: '14px',
-                        fontWeight: 600,
-                        marginBottom: '24px',
-                        width: 'fit-content',
-                        backdropFilter: 'blur(4px)',
-                    }}>
-                        ← Back to Events
-                    </Link>
                     <h1 style={{
                         fontSize: '48px',
                         fontWeight: 700,
