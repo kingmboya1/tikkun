@@ -69,7 +69,7 @@ const Pillars: React.FC = () => {
                         maxWidth: '600px',
                         margin: '0 auto',
                     }}>
-                        Building sustainable communities through education, climate action, and partnerships
+                        Building Sustainable Communities through Transformative Education and Empowerment, Climate Action, Partnerships and effective Organizations Capacity programs
                     </p>
                 </div>
 
