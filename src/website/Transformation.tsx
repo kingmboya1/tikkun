@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Headers from "../layouts/Headers";
 import Search from "../layouts/Search";
 import Footer from "../layouts/Footer";
@@ -8,6 +8,20 @@ const Transformation: React.FC = () => {
     useEffect(() => {
         document.title = "Transformative Education and Empowerment - Tikkun Africa Foundation"
     }, [])
+
+    const heroSlides = [
+        `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-15.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-02.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-07.jpg`,
+    ];
+    const [heroSlide, setHeroSlide] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setHeroSlide(prev => (prev + 1) % heroSlides.length);
+        }, 2000);
+        return () => clearInterval(timer);
+    }, [heroSlides.length])
 
     const keyPoints = [
         { icon: '🎓', title: 'Skills Training', desc: 'Equipping women and youth with practical skills for self-reliance' },
@@ -28,13 +42,20 @@ const Transformation: React.FC = () => {
                 height: '500px',
                 overflow: 'hidden',
             }}>
-                <div style={{
-                    position: 'absolute',
-                    inset: 0,
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/transform.jpg)`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                }}></div>
+                {heroSlides.map((slide, index) => (
+                    <div
+                        key={slide}
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            backgroundImage: `url(${slide})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            opacity: index === heroSlide ? 1 : 0,
+                            transition: 'opacity 0.8s ease-in-out',
+                        }}
+                    ></div>
+                ))}
                 <div style={{
                     position: 'absolute',
                     inset: 0,
