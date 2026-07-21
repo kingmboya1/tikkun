@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Headers from "../layouts/Headers";
 import Search from "../layouts/Search";
 import Footer from "../layouts/Footer";
@@ -8,6 +8,21 @@ const Climate: React.FC = () => {
     useEffect(() => {
         document.title = "Climate Action & Renewable Energy - Tikkun Africa Foundation"
     }, [])
+
+    const heroSlides = [
+        `${process.env.PUBLIC_URL}/assets/images/climate-hero-2026.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-06.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-08.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/climate_3.jpg`,
+    ];
+    const [heroSlide, setHeroSlide] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setHeroSlide(prev => (prev + 1) % heroSlides.length);
+        }, 2000);
+        return () => clearInterval(timer);
+    }, [heroSlides.length])
 
     const keyPoints = [
         { icon: '🌱', title: 'Sustainable Farming', desc: 'Farming kits and climate-smart agriculture practices' },
@@ -28,13 +43,20 @@ const Climate: React.FC = () => {
                 height: '600px',
                 overflow: 'hidden',
             }}>
-                <div style={{
-                    position: 'absolute',
-                    inset: 0,
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/climate-hero-2026.jpg)`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center 40%',
-                }}></div>
+                {heroSlides.map((slide, index) => (
+                    <div
+                        key={slide}
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            backgroundImage: `url(${slide})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center 40%',
+                            opacity: index === heroSlide ? 1 : 0,
+                            transition: 'opacity 0.8s ease-in-out',
+                        }}
+                    ></div>
+                ))}
                 <div style={{
                     position: 'absolute',
                     inset: 0,
