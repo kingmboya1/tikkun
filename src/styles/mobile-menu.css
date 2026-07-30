@@ -50,6 +50,10 @@
     opacity: 1;
 }
 
+.mobile-menu.active .menu-box {
+    transform: translateX(0) !important;
+}
+
 .mobile-menu .close-btn {
     position: absolute;
     top: 20px;
