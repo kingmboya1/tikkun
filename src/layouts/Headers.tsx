@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import '../styles/mobile-menu.css'
 
 const Headers: React.FC = () => {
+
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return(
 
@@ -52,7 +55,7 @@ const Headers: React.FC = () => {
 
                             <div className="nav-outer clearfix">
 
-                                <div className="mobile-nav-toggler"><span className="icon flaticon-menu-1"></span></div>
+                                <div className="mobile-nav-toggler" onClick={() => setMobileMenuOpen(true)}><span className="icon flaticon-menu-1"></span></div>
 
 
                                 <nav className="main-menu navbar-expand-md navbar-light" style={{display: 'block', visibility: 'visible'}}>
@@ -94,14 +97,14 @@ const Headers: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="mobile-menu">
-                    <div className="menu-backdrop"></div>
-                    <div className="close-btn"><span className="icon flaticon-cancel"></span></div>
+                <div className={`mobile-menu ${mobileMenuOpen ? 'active' : ''}`}>
+                    <div className="menu-backdrop" onClick={() => setMobileMenuOpen(false)}></div>
+                    <div className="close-btn" onClick={() => setMobileMenuOpen(false)}><span className="icon flaticon-cancel"></span></div>
 
                     <nav className="menu-box">
                         <div className="nav-logo"><Link to="/"><img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} style={{maxHeight: "60px"}} alt="" title="" /></Link>
                         </div>
-                        <div className="menu-outer">
+                        <div className="menu-outer" onClick={() => setMobileMenuOpen(false)}>
                             <ul className="navigation clearfix">
                                 <li className="current"><Link to="/">Home</Link></li>
                                 <li className="dropdown"><Link to="/pillars">Pillars</Link>
