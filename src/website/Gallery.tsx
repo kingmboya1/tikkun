@@ -392,18 +392,6 @@ const Gallery: React.FC = () => {
             alt: "Jasmin Girls Empowerment"
         },
         {
-            id: 104,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-03.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Jasmin Girls Empowerment"
-        },
-        {
-            id: 105,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-04.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Jasmin Girls Empowerment"
-        },
-        {
             id: 106,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-05.jpg`,
             categories: ['Transformative Education & Empowerment'],
