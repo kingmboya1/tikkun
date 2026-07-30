@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Headers from "../layouts/Headers";
 import Search from "../layouts/Search";
 import Footer from "../layouts/Footer";
+import '../styles/grid-utils.css';
 
 const Contact: React.FC = () => {
 
@@ -87,9 +88,7 @@ const Contact: React.FC = () => {
                 background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
             }}>
                 <div className="auto-container">
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(4, 1fr)',
+                    <div className="grid-4" style={{
                         gap: '25px',
                     }}>
                         {contactInfo.map((info, index) => (
@@ -118,9 +117,7 @@ const Contact: React.FC = () => {
             {/* Contact Form & Map Section */}
             <section style={{ padding: '80px 0' }}>
                 <div className="auto-container">
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
+                    <div className="grid-2" style={{
                         gap: '60px',
                         alignItems: 'start',
                     }}>
@@ -150,7 +147,7 @@ const Contact: React.FC = () => {
                             </h2>
 
                             <form onSubmit={handleSubmit}>
-                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+                                <div className="grid-2" style={{ gap: '20px', marginBottom: '20px' }}>
                                     <input
                                         type="text"
                                         name="name"

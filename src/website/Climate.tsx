@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Headers from "../layouts/Headers";
 import Search from "../layouts/Search";
 import Footer from "../layouts/Footer";
+import '../styles/grid-utils.css';
 
 const Climate: React.FC = () => {
 
@@ -87,9 +88,7 @@ const Climate: React.FC = () => {
                 background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
             }}>
                 <div className="auto-container">
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(4, 1fr)',
+                    <div className="grid-4" style={{
                         gap: '25px',
                     }}>
                         {keyPoints.map((point, index) => (
@@ -116,9 +115,7 @@ const Climate: React.FC = () => {
             {/* Content Section */}
             <section style={{ padding: '80px 0' }}>
                 <div className="auto-container">
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
+                    <div className="grid-2" style={{
                         gap: '60px',
                         alignItems: 'start',
                     }}>
@@ -240,9 +237,7 @@ const Climate: React.FC = () => {
                                 working toward a shared goal, and reinforces the cleanliness and civic pride
                                 that residents already hold as part of their everyday household norms.</p>
                         </div>
-                        <div style={{
-                            display: 'grid',
-                            gridTemplateColumns: 'repeat(2, 1fr)',
+                        <div className="grid-2" style={{
                             gap: '20px',
                             margin: '30px 0',
                         }}>

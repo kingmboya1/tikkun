@@ -6,6 +6,7 @@ import Footer from "../layouts/Footer";
 import Facts from "../layouts/Facts";
 import Pillars from "../layouts/Pillars";
 import What from "../layouts/What";
+import '../styles/grid-utils.css';
 
 
 
@@ -82,9 +83,7 @@ const Home: React.FC = () => {
 
                 <div className="auto-container">
                     {/* Mission */}
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
+                    <div className="grid-2" style={{
                         gap: '60px',
                         alignItems: 'center',
                         marginBottom: '80px',
@@ -180,9 +179,7 @@ const Home: React.FC = () => {
                     </div>
 
                     {/* Vision */}
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
+                    <div className="grid-2" style={{
                         gap: '60px',
                         alignItems: 'center',
                     }}>
@@ -491,9 +488,7 @@ const Home: React.FC = () => {
                 }}></div>
 
                 <div className="auto-container">
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
+                    <div className="grid-2" style={{
                         gap: '60px',
                         alignItems: 'center',
                     }}>
@@ -548,9 +543,7 @@ const Home: React.FC = () => {
                         </div>
 
                         {/* Right Column - Feature Cards */}
-                        <div style={{
-                            display: 'grid',
-                            gridTemplateColumns: '1fr 1fr',
+                        <div className="grid-2" style={{
                             gap: '20px',
                         }}>
                             {[

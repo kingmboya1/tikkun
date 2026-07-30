@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../styles/grid-utils.css';
 
 const pillarsData = [
     {
@@ -74,9 +75,7 @@ const Pillars: React.FC = () => {
                 </div>
 
                 {/* Cards Grid */}
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(4, 1fr)',
+                <div className="grid-4" style={{
                     gap: '25px',
                 }}>
                     {pillarsData.map((pillar, index) => (
