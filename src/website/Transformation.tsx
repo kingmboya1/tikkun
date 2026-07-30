@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Headers from "../layouts/Headers";
 import Search from "../layouts/Search";
 import Footer from "../layouts/Footer";
@@ -9,6 +9,20 @@ const Transformation: React.FC = () => {
     useEffect(() => {
         document.title = "Transformative Education and Empowerment - Tikkun Africa Foundation"
     }, [])
+
+    const heroSlides = [
+        `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-15.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-02.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-07.jpg`,
+    ];
+    const [heroSlide, setHeroSlide] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setHeroSlide(prev => (prev + 1) % heroSlides.length);
+        }, 2000);
+        return () => clearInterval(timer);
+    }, [heroSlides.length])
 
     const keyPoints = [
         { icon: '🎓', title: 'Skills Training', desc: 'Equipping women and youth with practical skills for self-reliance' },
@@ -29,13 +43,20 @@ const Transformation: React.FC = () => {
                 height: '500px',
                 overflow: 'hidden',
             }}>
-                <div style={{
-                    position: 'absolute',
-                    inset: 0,
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/transform.jpg)`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                }}></div>
+                {heroSlides.map((slide, index) => (
+                    <div
+                        key={slide}
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            backgroundImage: `url(${slide})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            opacity: index === heroSlide ? 1 : 0,
+                            transition: 'opacity 0.8s ease-in-out',
+                        }}
+                    ></div>
+                ))}
                 <div style={{
                     position: 'absolute',
                     inset: 0,
@@ -169,53 +190,6 @@ const Transformation: React.FC = () => {
                 </div>
             </section> 
             
-            {/* Impact Story Section */}
-                <section style={{ padding: '80px 0', background: '#f8f9fa' }}>
-                    <div className="auto-container">
-                        <span style={{
-                            display: 'inline-block',
-                            padding: '8px 20px',
-                            backgroundColor: 'rgba(46,125,50,0.1)',
-                            color: '#2e7d32',
-                            borderRadius: '25px',
-                            fontSize: '14px',
-                            fontWeight: 600,
-                            marginBottom: '15px'
-                        }}>
-                            Impact Story
-                        </span>
-                        <h2 style={{ fontSize: '36px', fontWeight: 700, marginBottom: '20px' }}>
-                            Celebrating International Women's Day 2025
-                        </h2>
-                        <p style={{ fontSize: '18px', lineHeight: 1.7, color: '#555', maxWidth: '800px', marginBottom: '30px' }}>
-                            Celebrating International Women's Day 2025 with a theme dear to our vision, "Accelerate Action," Tikkun provides a platform for ALL women and girls to access Transformative Education and Empowerment. We hosted successful sessions for women and teenage mothers from underprivileged communities. These sessions had both direct and indirect impact in the community.
-                        </p>
-                        <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>
-                            Direct Impact
-                        </h3>
-                        <div className="grid-3" style={{ gap: '25px' }}>
-                            <div style={{ background: '#fff', borderRadius: '20px', padding: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
-                                <h4 style={{ fontSize: '18px', marginBottom: '10px' }}>Access to Education</h4>
-                                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#555' }}>
-                                    Training in financial skills, entrepreneurship, and life skills that build resilience and promote inclusion within the community, while finding a niche to work well with male allies.
-                                </p>
-                            </div>
-                            <div style={{ background: '#fff', borderRadius: '20px', padding: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
-                                <h4 style={{ fontSize: '18px', marginBottom: '10px' }}>Confidence & Guidance</h4>
-                                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#555' }}>
-                                    Empowering women, especially young teenage mothers, to build confidence in decision-making, and granting them information to access proper health care services.
-                                </p>
-                            </div>
-                            <div style={{ background: '#fff', borderRadius: '20px', padding: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
-                                <h4 style={{ fontSize: '18px', marginBottom: '10px' }}>Role Models & Peer Networks</h4>
-                                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#555' }}>
-                                    Mapping participants with role models and building peer-to-peer networks for support and further engagement, strengthening communities.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* Impact Story: Mgandini Primary School */}
                 <section style={{ padding: '80px 0', background: '#fff' }}>
                     <div className="auto-container">
@@ -280,6 +254,53 @@ const Transformation: React.FC = () => {
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                                 <span style={{ color: '#2e7d32', fontWeight: 700 }}>SDG 17</span>
                                 <p style={{ fontSize: '15px', color: '#555', margin: 0 }}>Partnerships for the Goals — collaboration with Yasmin Girl Empowerment, Global Ministries For Christ, and other stakeholders.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            {/* Impact Story Section */}
+                <section style={{ padding: '80px 0', background: '#f8f9fa' }}>
+                    <div className="auto-container">
+                        <span style={{
+                            display: 'inline-block',
+                            padding: '8px 20px',
+                            backgroundColor: 'rgba(46,125,50,0.1)',
+                            color: '#2e7d32',
+                            borderRadius: '25px',
+                            fontSize: '14px',
+                            fontWeight: 600,
+                            marginBottom: '15px'
+                        }}>
+                            Impact Story
+                        </span>
+                        <h2 style={{ fontSize: '36px', fontWeight: 700, marginBottom: '20px' }}>
+                            Celebrating International Women's Day 2025
+                        </h2>
+                        <p style={{ fontSize: '18px', lineHeight: 1.7, color: '#555', maxWidth: '800px', marginBottom: '30px' }}>
+                            Celebrating International Women's Day 2025 with a theme dear to our vision, "Accelerate Action," Tikkun provides a platform for ALL women and girls to access Transformative Education and Empowerment. We hosted successful sessions for women and teenage mothers from underprivileged communities. These sessions had both direct and indirect impact in the community.
+                        </p>
+                        <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>
+                            Direct Impact
+                        </h3>
+                        <div className="grid-3" style={{ gap: '25px' }}>
+                            <div style={{ background: '#fff', borderRadius: '20px', padding: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
+                                <h4 style={{ fontSize: '18px', marginBottom: '10px' }}>Access to Education</h4>
+                                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#555' }}>
+                                    Training in financial skills, entrepreneurship, and life skills that build resilience and promote inclusion within the community, while finding a niche to work well with male allies.
+                                </p>
+                            </div>
+                            <div style={{ background: '#fff', borderRadius: '20px', padding: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
+                                <h4 style={{ fontSize: '18px', marginBottom: '10px' }}>Confidence & Guidance</h4>
+                                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#555' }}>
+                                    Empowering women, especially young teenage mothers, to build confidence in decision-making, and granting them information to access proper health care services.
+                                </p>
+                            </div>
+                            <div style={{ background: '#fff', borderRadius: '20px', padding: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
+                                <h4 style={{ fontSize: '18px', marginBottom: '10px' }}>Role Models & Peer Networks</h4>
+                                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#555' }}>
+                                    Mapping participants with role models and building peer-to-peer networks for support and further engagement, strengthening communities.
+                                </p>
                             </div>
                         </div>
                     </div>
