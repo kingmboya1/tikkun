@@ -11,15 +11,44 @@
 
     .page-wrapper,
     .donate-page {
-        padding-top: 155px;
+        padding-top: 90px;
     }
-}
 
-/* Very narrow phones: the logo/menu-toggle row wraps taller, so the header
-   itself grows a bit more here than at the wider mobile sizes above. */
-@media only screen and (max-width: 340px) {
-    .page-wrapper,
-    .donate-page {
-        padding-top: 195px;
+    /* The legacy theme lays the logo and nav out as floats, with .nav-outer
+       set to width:100% - that's fine on desktop where the full nav menu
+       fills that width, but on mobile the menu is hidden and only the
+       hamburger icon is left inside .nav-outer, which still claims the
+       full row width and so wraps onto its own line below the logo,
+       leaving a large gap and pushing the tap target somewhere the user
+       doesn't expect. Force logo + hamburger onto one flex row instead. */
+    .main-header .header-upper .inner-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 0;
+        padding: 12px 15px;
+    }
+
+    .main-header .header-upper .logo-box {
+        float: none;
+    }
+
+    .main-header .header-upper .logo-box .logo {
+        padding: 0;
+    }
+
+    .main-header .header-upper .logo-box .logo img {
+        height: 50px;
+    }
+
+    .main-header .nav-outer {
+        float: none;
+        width: auto;
+    }
+
+    .nav-outer .mobile-nav-toggler {
+        float: none;
+        margin: 0;
+        line-height: 1;
     }
 }
