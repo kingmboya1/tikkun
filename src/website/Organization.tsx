@@ -63,7 +63,7 @@ const Organization: React.FC = () => {
                         Our Pillars
                     </span>
                     <h1 style={{
-                        fontSize: '52px',
+                        fontSize: 'clamp(28px, 9vw, 52px)',
                         fontWeight: 700,
                         color: '#fff',
                         marginBottom: '15px',

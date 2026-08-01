@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/mobile-menu.css'
+import '../styles/mobile-header-fix.css'
 
 const Headers: React.FC = () => {
 

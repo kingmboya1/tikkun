@@ -1,0 +1,25 @@
+/* The fixed header's contact bar (Call/Email) wraps unpredictably on small
+   screens, making the header taller than the page content accounts for and
+   hiding each page's hero banner underneath it. Hide that bar on mobile
+   (matching the existing pattern that already hides the social-links half of
+   it at larger breakpoints) and add matching top padding so hero content
+   clears the shorter, now-consistent header height. */
+@media only screen and (max-width: 767px) {
+    .main-header .header-top {
+        display: none;
+    }
+
+    .page-wrapper,
+    .donate-page {
+        padding-top: 155px;
+    }
+}
+
+/* Very narrow phones: the logo/menu-toggle row wraps taller, so the header
+   itself grows a bit more here than at the wider mobile sizes above. */
+@media only screen and (max-width: 340px) {
+    .page-wrapper,
+    .donate-page {
+        padding-top: 195px;
+    }
+}
