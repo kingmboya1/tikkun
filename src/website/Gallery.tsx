@@ -97,21 +97,21 @@ const Gallery: React.FC = () => {
         {
             id: 69,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/malawi_11.jpg`,
-            categories: ["Organization and Capacity Building"],
+            categories: ["Transformative Education & Empowerment"],
             alt: "Women"
         },
 
         {
             id: 68,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/malawi_12.jpg`,
-            categories: ["Organization and Capacity Building"],
+            categories: ["Transformative Education & Empowerment"],
             alt: "Women"
         },
 
         {
             id: 67,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/malawi_10.jpg`,
-            categories: ["Organization and Capacity Building"],
+            categories: ["Transformative Education & Empowerment"],
             alt: "Women"
         },
 
@@ -482,77 +482,77 @@ const Gallery: React.FC = () => {
         {
             id: 117,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-01.jpg`,
-            categories: ['Behavior Change Catch Up'],
+            categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
 
         {
             id: 118,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-02.jpg`,
-            categories: ['Behavior Change Catch Up'],
+            categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
 
         {
             id: 119,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-03.jpg`,
-            categories: ['Behavior Change Catch Up'],
+            categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
 
         {
             id: 120,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-04.jpg`,
-            categories: ['Behavior Change Catch Up'],
+            categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
 
         {
             id: 121,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-05.jpg`,
-            categories: ['Behavior Change Catch Up'],
+            categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
 
         {
             id: 122,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-06.jpg`,
-            categories: ['Behavior Change Catch Up'],
+            categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
 
         {
             id: 123,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-07.jpg`,
-            categories: ['Behavior Change Catch Up'],
+            categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
 
         {
             id: 124,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-08.jpg`,
-            categories: ['Behavior Change Catch Up'],
+            categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
 
         {
             id: 125,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-09.jpg`,
-            categories: ['Behavior Change Catch Up'],
+            categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
 
         {
             id: 126,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-10.jpg`,
-            categories: ['Behavior Change Catch Up'],
+            categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
 
         {
             id: 127,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-11.jpg`,
-            categories: ['Behavior Change Catch Up'],
+            categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
 
@@ -664,19 +664,6 @@ const Gallery: React.FC = () => {
         ? galleryItems
         : galleryItems.filter(item => item.categories.includes(activeFilter));
 
-    // Sort items: Portrait first, then Landscape
-    const sortedItems = [...filteredItems].sort((a, b) => {
-        const orientationA = orientations[a.id];
-        const orientationB = orientations[b.id];
-
-        // If one is loaded and other is not, prioritize loaded? No, order by portrait/landscape
-        // If both undefined (not loaded), keep original order
-        if (!orientationA || !orientationB) return 0;
-
-        if (orientationA === orientationB) return 0;
-        return orientationA === 'portrait' ? -1 : 1; // Portrait first (appears first)
-    });
-
 
     return (
 
@@ -770,7 +757,7 @@ const Gallery: React.FC = () => {
                             gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
                             gap: '20px',
                         }}>
-                            {sortedItems.map(item => (
+                            {filteredItems.map(item => (
                                 <div
                                     key={item.id}
                                     style={{

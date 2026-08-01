@@ -6,6 +6,11 @@ import '../styles/mobile-header-fix.css'
 const Headers: React.FC = () => {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+    const toggleDropdown = (dropdownName: string) => {
+        setOpenDropdown(openDropdown === dropdownName ? null : dropdownName);
+    };
 
     return(
 
@@ -105,27 +110,27 @@ const Headers: React.FC = () => {
                     <nav className="menu-box">
                         <div className="nav-logo"><Link to="/"><img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} style={{maxHeight: "60px"}} alt="" title="" /></Link>
                         </div>
-                        <div className="menu-outer" onClick={() => setMobileMenuOpen(false)}>
+                        <div className="menu-outer">
                             <ul className="navigation clearfix">
-                                <li className="current"><Link to="/">Home</Link></li>
-                                <li className="dropdown"><Link to="/pillars">Pillars</Link>
-                                    <ul>
-                                        <li><Link to="/transformation">Transformative Education and Empowerment</Link></li>
-                                        <li><Link to="/climate">Climate Action & Renewable Energy</Link></li>
-                                        <li><Link to="/organization">Organization Capacity Building</Link></li>
-                                        <li><Link to="/networking">Networking & Partnerships</Link></li>
+                                <li className="current"><Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
+                                <li className="dropdown"><span onClick={() => toggleDropdown('pillars')} style={{cursor: 'pointer', display: 'block', padding: '12px 0'}}>Pillars</span>
+                                    <ul style={{display: openDropdown === 'pillars' ? 'block' : 'none'}}>
+                                        <li><Link to="/transformation" onClick={() => setMobileMenuOpen(false)}>Transformative Education and Empowerment</Link></li>
+                                        <li><Link to="/climate" onClick={() => setMobileMenuOpen(false)}>Climate Action & Renewable Energy</Link></li>
+                                        <li><Link to="/organization" onClick={() => setMobileMenuOpen(false)}>Organization Capacity Building</Link></li>
+                                        <li><Link to="/networking" onClick={() => setMobileMenuOpen(false)}>Networking & Partnerships</Link></li>
                                     </ul>
                                 </li>
-                                <li><Link to="/events">Events</Link></li>
-                                <li><Link to="/gallery">Gallery</Link></li>
-                                <li className="dropdown"><Link to="/about">About</Link>
-                                    <ul>
-                                        <li><Link to="/about">About Us</Link></li>
-                                        <li><Link to="/partners">Our Partners</Link></li>
-                                        <li><Link to="/faqs">FAQs</Link></li>
+                                <li><Link to="/events" onClick={() => setMobileMenuOpen(false)}>Events</Link></li>
+                                <li><Link to="/gallery" onClick={() => setMobileMenuOpen(false)}>Gallery</Link></li>
+                                <li className="dropdown"><span onClick={() => toggleDropdown('about')} style={{cursor: 'pointer', display: 'block', padding: '12px 0'}}>About</span>
+                                    <ul style={{display: openDropdown === 'about' ? 'block' : 'none'}}>
+                                        <li><Link to="/about" onClick={() => setMobileMenuOpen(false)}>About Us</Link></li>
+                                        <li><Link to="/partners" onClick={() => setMobileMenuOpen(false)}>Our Partners</Link></li>
+                                        <li><Link to="/faqs" onClick={() => setMobileMenuOpen(false)}>FAQs</Link></li>
                                     </ul>
                                 </li>
-                                <li><Link to="/contact">Contact</Link></li>
+                                <li><Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link></li>
                             </ul>
                         </div>
 

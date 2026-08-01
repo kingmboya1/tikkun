@@ -14,6 +14,7 @@ const Partners = lazy(() => import('./website/Partners'));
 const Events = lazy(() => import('./website/Events'));
 const EventDetail = lazy(() => import('./website/EventDetail'));
 const Dashboard = lazy(() => import('./dashboard/Dashboard'));
+const Pillars = lazy(() => import('./layouts/Pillars'));
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
                     <Route path={"/partners"} element={<Partners />} />
                     <Route path={"/events"} element={<Events />} />
                     <Route path={"/events/:id"} element={<EventDetail />} />
+                    <Route path={"/pillars"} element={<Pillars />} />
                     <Route path={"/dashboard/*"} element={<Dashboard />} />
                 </Routes>
             </Suspense>
