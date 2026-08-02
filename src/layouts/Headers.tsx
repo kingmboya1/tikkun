@@ -86,7 +86,6 @@ const Headers: React.FC = () => {
                                                 <ul>
                                                     <li><Link to="/about">About Us</Link></li>
                                                     <li><Link to="/partners">Our Partners</Link></li>
-                                                    <li><Link to="/faqs">FAQs</Link></li>
                                                 </ul>
                                             </li>
 
@@ -108,12 +107,12 @@ const Headers: React.FC = () => {
                     <div className="close-btn" onClick={() => setMobileMenuOpen(false)}><span className="icon flaticon-cancel"></span></div>
 
                     <nav className="menu-box">
-                        <div className="nav-logo"><Link to="/"><img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} style={{maxHeight: "60px"}} alt="" title="" /></Link>
+                        <div className="nav-logo !py-2"><Link to="/"><img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} style={{maxHeight: "60px"}} alt="" title="" /></Link>
                         </div>
                         <div className="menu-outer">
-                            <ul className="navigation clearfix">
+                            <ul className="navigation clearfix !mt-4">
                                 <li className="current"><Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
-                                <li className="dropdown"><span onClick={() => toggleDropdown('pillars')} style={{cursor: 'pointer', display: 'block', padding: '12px 0'}}>Pillars</span>
+                                <li className="dropdown"><span onClick={() => toggleDropdown('pillars')} className="!uppercase !text-[15px] !font-medium !text-[#228B22]" style={{cursor: 'pointer', display: 'block', padding: '12px 0'}}>Pillars</span>
                                     <ul style={{display: openDropdown === 'pillars' ? 'block' : 'none'}}>
                                         <li><Link to="/transformation" onClick={() => setMobileMenuOpen(false)}>Transformative Education and Empowerment</Link></li>
                                         <li><Link to="/climate" onClick={() => setMobileMenuOpen(false)}>Climate Action & Renewable Energy</Link></li>
@@ -123,11 +122,10 @@ const Headers: React.FC = () => {
                                 </li>
                                 <li><Link to="/events" onClick={() => setMobileMenuOpen(false)}>Events</Link></li>
                                 <li><Link to="/gallery" onClick={() => setMobileMenuOpen(false)}>Gallery</Link></li>
-                                <li className="dropdown"><span onClick={() => toggleDropdown('about')} style={{cursor: 'pointer', display: 'block', padding: '12px 0'}}>About</span>
+                                <li className="dropdown"><span onClick={() => toggleDropdown('about')} className="!uppercase !text-[15px] !font-medium !text-[#228B22]" style={{cursor: 'pointer', display: 'block', padding: '12px 0'}}>About</span>
                                     <ul style={{display: openDropdown === 'about' ? 'block' : 'none'}}>
                                         <li><Link to="/about" onClick={() => setMobileMenuOpen(false)}>About Us</Link></li>
                                         <li><Link to="/partners" onClick={() => setMobileMenuOpen(false)}>Our Partners</Link></li>
-                                        <li><Link to="/faqs" onClick={() => setMobileMenuOpen(false)}>FAQs</Link></li>
                                     </ul>
                                 </li>
                                 <li><Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link></li>

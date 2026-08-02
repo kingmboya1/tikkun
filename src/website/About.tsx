@@ -28,7 +28,7 @@ const About: React.FC = () => {
                 <div className="auto-container">
                     <h1>About Us</h1>
                     <ul className="bread-crumb clearfix">
-                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li className="active">About Us</li>
                     </ul>
                 </div>

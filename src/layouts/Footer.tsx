@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                                         <h3>Pillars</h3>
                                         <ul>
 
-                                            <li><a href={"/transform"} style={{fontSize: "14px"}}>Transformative Education and Empowerment </a></li>
+                                            <li><a href={"/transformation"} style={{fontSize: "14px"}}>Transformative Education and Empowerment </a></li>
                                             <li><a href={"/climate"} style={{fontSize: "14px"}}>Climate Action & renewable Energy</a></li>
                                             <li><a href={"/organization"} style={{fontSize: "14px"}}>Organization Capacity Building</a></li>
                                             <li><a href={"/networking"} style={{fontSize: "14px"}}>Networking & Partnerships</a></li>
@@ -73,14 +73,14 @@ const Footer: React.FC = () => {
                                         <h3>Top Projects</h3>
 
                                         <div className="news-post">
-                                            <div className="post-thumb"><a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/climate.jpg`} alt="" /></a></div>
-                                            <h5><a href="#">Ongata Greening Initiative</a></h5>
+                                            <div className="post-thumb"><Link to="/climate"><img src={`${process.env.PUBLIC_URL}/assets/images/climate.jpg`} alt="Ongata Greening Initiative" /></Link></div>
+                                            <h5><Link to="/climate">Ongata Greening Initiative</Link></h5>
                                             <div className="date">July 25, 2024</div>
                                         </div>
 
                                         <div className="news-post">
-                                            <div className="post-thumb"><a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/thumb_1.jpg`} alt="" /></a></div>
-                                            <h5><a href="#">Mombasa Farm Kits</a></h5>
+                                            <div className="post-thumb"><Link to="/climate"><img src={`${process.env.PUBLIC_URL}/assets/images/thumb_1.jpg`} alt="Mombasa Farm Kits" /></Link></div>
+                                            <h5><Link to="/climate">Mombasa Farm Kits</Link></h5>
                                             <div className="date">July 25, 2024</div>
                                         </div>
                                     </div>
@@ -92,12 +92,12 @@ const Footer: React.FC = () => {
                         <div className="nav-box clearfix">
                             <div className="inner clearfix">
                                 <ul className="footer-nav clearfix">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Causes</a></li>
-                                    <li><a href="#">Events</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><Link to="/">Home</Link></li>
+                                    <li><Link to="/about">About</Link></li>
+                                    <li><Link to="/gallery">Gallery</Link></li>
+                                    <li><Link to="/events">Events</Link></li>
+                                    <li><Link to="/partners">Partners</Link></li>
+                                    <li><Link to="/contact">Contact</Link></li>
                                 </ul>
 
                                 <div className="donate-link"><Link to="/donate" className="theme-btn btn-style-one" data-editable="donate-button"><span className="btn-title">Donate Now</span></Link></div>
