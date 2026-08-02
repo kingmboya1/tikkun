@@ -3,7 +3,10 @@
    hiding each page's hero banner underneath it. Hide that bar on mobile
    (matching the existing pattern that already hides the social-links half of
    it at larger breakpoints) and add matching top padding so hero content
-   clears the shorter, now-consistent header height. */
+   clears the shorter, now-consistent header height. The logo/hamburger row
+   layout itself is handled with Tailwind !important utility classes
+   directly on the elements in Headers.tsx, since the legacy float-based
+   layout there needs a guaranteed override regardless of CSS specificity. */
 @media only screen and (max-width: 767px) {
     .main-header .header-top {
         display: none;
@@ -12,43 +15,5 @@
     .page-wrapper,
     .donate-page {
         padding-top: 90px;
-    }
-
-    /* The legacy theme lays the logo and nav out as floats, with .nav-outer
-       set to width:100% - that's fine on desktop where the full nav menu
-       fills that width, but on mobile the menu is hidden and only the
-       hamburger icon is left inside .nav-outer, which still claims the
-       full row width and so wraps onto its own line below the logo,
-       leaving a large gap and pushing the tap target somewhere the user
-       doesn't expect. Force logo + hamburger onto one flex row instead. */
-    .main-header .header-upper .inner-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 0;
-        padding: 12px 15px;
-    }
-
-    .main-header .header-upper .logo-box {
-        float: none;
-    }
-
-    .main-header .header-upper .logo-box .logo {
-        padding: 0;
-    }
-
-    .main-header .header-upper .logo-box .logo img {
-        height: 50px;
-    }
-
-    .main-header .nav-outer {
-        float: none;
-        width: auto;
-    }
-
-    .nav-outer .mobile-nav-toggler {
-        float: none;
-        margin: 0;
-        line-height: 1;
     }
 }

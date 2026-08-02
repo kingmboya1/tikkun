@@ -50,18 +50,18 @@ const Headers: React.FC = () => {
 
                 <div className="header-upper">
                     <div className="auto-container">
-                        <div className="inner-container clearfix">
+                        <div className="inner-container clearfix !flex !items-center !justify-between !min-h-0 !p-3 md:!block md:!p-0 md:!min-h-[120px]">
 
                             <div className="logo-box" style={{backgroundColor: "transparent"}}>
                                 <div className="logo"><Link to="/" title="Tikkun Africa Foundation">
                                     <br />
-                                    <img src={`${process.env.PUBLIC_URL}/assets/images/sticky-logo.png`} alt="Tikkun Africa Foundation" /></Link></div>
+                                    <img className="!h-[46px] md:!h-auto" src={`${process.env.PUBLIC_URL}/assets/images/sticky-logo.png`} alt="Tikkun Africa Foundation" /></Link></div>
                             </div>
 
 
                             <div className="nav-outer clearfix">
 
-                                <div className="mobile-nav-toggler" onClick={() => setMobileMenuOpen(true)}><span className="icon flaticon-menu-1"></span></div>
+                                <div className="mobile-nav-toggler !m-0 !p-2" onClick={() => setMobileMenuOpen(true)}><span className="icon flaticon-menu-1"></span></div>
 
 
                                 <nav className="main-menu navbar-expand-md navbar-light" style={{display: 'block', visibility: 'visible'}}>

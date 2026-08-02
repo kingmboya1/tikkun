@@ -13,25 +13,30 @@
     }
 }
 
+/* Slide this panel using the "right" offset rather than "transform" -
+   giving an element a transform (even a no-op translateX(0) once active)
+   makes it the fixed-positioning containing block for any position:fixed
+   descendants, which traps .menu-backdrop below inside this 300px panel
+   instead of covering the full screen. */
 .mobile-menu {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -320px;
     height: 100%;
     width: 300px;
     max-width: 85%;
     background: #fff;
     z-index: 99999;
-    transform: translateX(100%);
-    transition: transform 0.4s ease;
+    transition: right 0.4s ease;
     overflow-y: auto;
     padding: 30px 20px;
     visibility: hidden;
 }
 
 .mobile-menu.active {
-    transform: translateX(0);
+    right: 0;
     visibility: visible;
+    opacity: 1;
 }
 
 .mobile-menu .menu-backdrop {
@@ -48,10 +53,24 @@
 
 .mobile-menu.active .menu-backdrop {
     opacity: 1;
+    transform: translateX(0) !important;
+}
+
+/* The legacy theme's own .menu-box rule (from style.css) hides this element
+   by default with opacity:0/visibility:hidden, only revealing it via a
+   ".mobile-menu-visible" class on an ancestor that this React menu never
+   sets - it toggles "active" on .mobile-menu itself instead. Override all
+   three of the legacy hidden-state properties here, and swap its dark
+   #202020 background for white since the nav link text color below was
+   written assuming a light background. */
+.mobile-menu .menu-box {
+    background: #fff !important;
 }
 
 .mobile-menu.active .menu-box {
     transform: translateX(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .mobile-menu .close-btn {
@@ -60,6 +79,7 @@
     right: 20px;
     font-size: 24px;
     cursor: pointer;
+    color: #222 !important;
 }
 
 .mobile-menu .navigation {
