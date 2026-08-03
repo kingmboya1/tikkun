@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
                 <div style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(46, 125, 50, 0.6) 100%)',
+                    background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(34, 139, 34, 0.6) 100%)',
                 }}></div>
                 <div className="auto-container" style={{
                     position: 'relative',
@@ -126,8 +126,8 @@ const Contact: React.FC = () => {
                             <span style={{
                                 display: 'inline-block',
                                 padding: '8px 20px',
-                                backgroundColor: 'rgba(46, 125, 50, 0.1)',
-                                color: '#2e7d32',
+                                backgroundColor: 'rgba(34, 139, 34, 0.1)',
+                                color: '#228B22',
                                 borderRadius: '25px',
                                 fontSize: '14px',
                                 fontWeight: 600,
@@ -222,7 +222,7 @@ const Contact: React.FC = () => {
                                     type="submit"
                                     style={{
                                         padding: '16px 40px',
-                                        backgroundColor: '#2e7d32',
+                                        backgroundColor: '#228B22',
                                         color: '#fff',
                                         border: 'none',
                                         borderRadius: '30px',
@@ -230,7 +230,7 @@ const Contact: React.FC = () => {
                                         fontWeight: 600,
                                         cursor: 'pointer',
                                         transition: 'all 0.3s ease',
-                                        boxShadow: '0 4px 15px rgba(46, 125, 50, 0.3)',
+                                        boxShadow: '0 4px 15px rgba(34, 139, 34, 0.3)',
                                     }}
                                 >
                                     Send Message →
@@ -259,7 +259,7 @@ const Contact: React.FC = () => {
 
                             {/* Social Links */}
                             <div style={{
-                                background: 'linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)',
+                                background: 'linear-gradient(135deg, #228B22 0%, #176B17 100%)',
                                 borderRadius: '20px',
                                 padding: '30px',
                                 color: '#fff',

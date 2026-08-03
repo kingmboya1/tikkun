@@ -3,7 +3,7 @@
 }
 
 .donate-page .hero-section {
-    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    background: linear-gradient(135deg, #228B22 0%, #176B17 100%);
     position: relative;
     overflow: hidden;
 }
@@ -38,8 +38,8 @@
 }
 
 .donate-page .form-control:focus {
-    border-color: #28a745;
-    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+    border-color: #228B22;
+    box-shadow: 0 0 0 0.2rem rgba(34, 139, 34, 0.25);
 }
 
 .donate-page .alert {
@@ -94,34 +94,34 @@
 
 /* PayPal button styling */
 .donate-page .btn-success {
-    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    background: linear-gradient(135deg, #228B22 0%, #176B17 100%);
     border: none;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
 
 .donate-page .btn-success:hover {
-    background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+    background: linear-gradient(135deg, #176B17 0%, #1ea085 100%);
 }
 
 /* Amount selection buttons */
 .donate-page .btn-outline-primary {
     border-width: 2px;
     font-weight: 600;
-    border-color: #28a745;
-    color: #28a745;
+    border-color: #228B22;
+    color: #228B22;
 }
 
 .donate-page .btn-outline-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
-    background-color: #28a745;
-    border-color: #28a745;
+    box-shadow: 0 5px 15px rgba(34, 139, 34, 0.3);
+    background-color: #228B22;
+    border-color: #228B22;
 }
 
 /* Testimonial cards */
 .donate-page .testimonials-section .card {
-    border-left: 4px solid #28a745;
+    border-left: 4px solid #228B22;
 }
 
 .donate-page .testimonials-section .card:nth-child(2) {
@@ -130,7 +130,7 @@
 
 /* CTA section */
 .donate-page .cta-section {
-    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    background: linear-gradient(135deg, #228B22 0%, #176B17 100%);
     position: relative;
 }
 
@@ -147,7 +147,7 @@
 
 .donate-page .cta-section .btn-light {
     background: white;
-    color: #28a745;
+    color: #228B22;
     font-weight: 600;
     border: 2px solid white;
 }
@@ -157,3 +157,57 @@
     color: white;
     border-color: white;
 } 
+/* ---------------------------------------------------------------
+   Brand palette overrides for Bootstrap's factory defaults.
+   These pages were still using Bootstrap's stock blue/cyan/red,
+   which appear nowhere else on the site - most visibly the
+   "Donate Now" card header, which rendered bright blue (#007bff)
+   on the site's most important page.
+   --------------------------------------------------------------- */
+.donate-page .bg-primary {
+    background-color: #228B22 !important;
+}
+
+.donate-page .btn-primary {
+    background-color: #228B22;
+    border-color: #228B22;
+}
+
+.donate-page .btn-primary:hover {
+    background-color: #176B17;
+    border-color: #176B17;
+}
+
+.donate-page .bg-success {
+    background-color: #228B22 !important;
+}
+
+/* Brand gold, picked up from the logo, as the accent */
+.donate-page .bg-warning {
+    background-color: #F0CC00 !important;
+    color: #1a1a1a !important;
+}
+
+.donate-page .text-warning {
+    color: #F0CC00 !important;
+}
+
+.donate-page .bg-dark {
+    background-color: #176B17 !important;
+}
+
+/* The "Stay Connected" buttons were stock blue/cyan/red/green,
+   which read as a random rainbow rather than one brand. */
+.donate-page .btn-info,
+.donate-page .btn-danger {
+    background-color: #228B22;
+    border-color: #228B22;
+    color: #fff;
+}
+
+.donate-page .btn-info:hover,
+.donate-page .btn-danger:hover {
+    background-color: #176B17;
+    border-color: #176B17;
+    color: #fff;
+}

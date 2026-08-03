@@ -18,7 +18,7 @@ const Facts: React.FC = () => {
                                     <div className="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                                         <div className="content">
                                             <div className="count-outer count-box">
-                                                <span className="count-text" style={{color: "#3CC88F"}} data-speed="3000" data-stop="90">10+</span>
+                                                <span className="count-text" style={{color: "#228B22"}} data-speed="3000" data-stop="90">10+</span>
                                             </div>
                                             <div className="counter-title">Project Complete</div>
                                         </div>
@@ -30,7 +30,7 @@ const Facts: React.FC = () => {
                                     <div className="inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
                                         <div className="content">
                                             <div className="count-outer count-box alternate">
-                                                <span className="count-text" data-speed="3000" style={{color: "#3CC88F"}} data-stop="216">10+</span>
+                                                <span className="count-text" data-speed="3000" style={{color: "#228B22"}} data-stop="216">10+</span>
                                             </div>
                                             <div className="counter-title">Women Impacted</div>
                                         </div>
@@ -42,7 +42,7 @@ const Facts: React.FC = () => {
                                     <div className="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
                                         <div className="content">
                                             <div className="count-outer count-box">
-                                                <span className="count-text" data-speed="2000" style={{color: "#3CC88F"}} data-stop="35">10+</span>
+                                                <span className="count-text" data-speed="2000" style={{color: "#228B22"}} data-stop="35">10+</span>
                                             </div>
                                             <div className="counter-title">Households Impacted</div>
                                         </div>
@@ -54,7 +54,7 @@ const Facts: React.FC = () => {
                                     <div className="inner wow fadeInLeft" data-wow-delay="900ms" data-wow-duration="1500ms">
                                         <div className="content">
                                             <div className="count-outer count-box">
-                                                <span className="count-text" data-speed="2000" style={{color: "#3CC88F"}} data-stop="15">50+</span>
+                                                <span className="count-text" data-speed="2000" style={{color: "#228B22"}} data-stop="15">50+</span>
                                             </div>
                                             <div className="counter-title">Volunteers Involved</div>
                                         </div>

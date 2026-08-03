@@ -45,8 +45,8 @@ const Pillars: React.FC = () => {
                     <span style={{
                         display: 'inline-block',
                         padding: '8px 20px',
-                        backgroundColor: 'rgba(46, 125, 50, 0.1)',
-                        color: '#2e7d32',
+                        backgroundColor: 'rgba(34, 139, 34, 0.1)',
+                        color: '#228B22',
                         borderRadius: '25px',
                         fontSize: '14px',
                         fontWeight: 600,
@@ -119,13 +119,13 @@ const Pillars: React.FC = () => {
                                     left: '25px',
                                     width: '50px',
                                     height: '50px',
-                                    backgroundColor: '#2e7d32',
+                                    backgroundColor: '#228B22',
                                     borderRadius: '15px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     fontSize: '24px',
-                                    boxShadow: '0 5px 20px rgba(46, 125, 50, 0.4)',
+                                    boxShadow: '0 5px 20px rgba(34, 139, 34, 0.4)',
                                 }}>
                                     {pillar.icon}
                                 </div>
@@ -156,7 +156,7 @@ const Pillars: React.FC = () => {
                                         display: 'inline-flex',
                                         alignItems: 'center',
                                         gap: '8px',
-                                        color: '#2e7d32',
+                                        color: '#228B22',
                                         fontWeight: 600,
                                         fontSize: '15px',
                                         textDecoration: 'none',

@@ -17,3 +17,18 @@
         padding-top: 90px;
     }
 }
+
+/* On desktop the theme positions the logo absolutely inside a 280px gutter
+   that .inner-container reserves with padding-left. The mobile header work
+   applies a Tailwind `md:!p-0` to that same element, which wiped the gutter
+   and let the nav slide left underneath the logo (a ~230px overlap, with
+   "Home" rendering behind the logo). Restore the gutter above the mobile
+   breakpoint. */
+@media only screen and (min-width: 768px) {
+    .main-header .header-upper .inner-container {
+        padding-left: 280px !important;
+        padding-right: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}

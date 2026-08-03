@@ -739,10 +739,10 @@ const Gallery: React.FC = () => {
                                         fontSize: '14px',
                                         fontWeight: 500,
                                         transition: 'all 0.3s ease',
-                                        backgroundColor: activeFilter === category ? '#2e7d32' : '#fff',
+                                        backgroundColor: activeFilter === category ? '#228B22' : '#fff',
                                         color: activeFilter === category ? '#fff' : '#333',
                                         boxShadow: activeFilter === category
-                                            ? '0 4px 15px rgba(46, 125, 50, 0.4)'
+                                            ? '0 4px 15px rgba(34, 139, 34, 0.4)'
                                             : '0 2px 8px rgba(0,0,0,0.1)',
                                     }}
                                 >
@@ -817,7 +817,7 @@ const Gallery: React.FC = () => {
                                             alignItems: 'center',
                                             justifyContent: 'center',
                                             fontSize: '20px',
-                                            color: '#2e7d32',
+                                            color: '#228B22',
                                         }}>
                                             +
                                         </span>

@@ -39,7 +39,7 @@ const Networking: React.FC = () => {
                 <div style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(46, 125, 50, 0.6) 100%)',
+                    background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(34, 139, 34, 0.6) 100%)',
                 }}></div>
                 <div className="auto-container" style={{
                     position: 'relative',
@@ -135,7 +135,7 @@ const Networking: React.FC = () => {
                         </div>
                         <div>
                             <div style={{
-                                background: 'linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)',
+                                background: 'linear-gradient(135deg, #228B22 0%, #176B17 100%)',
                                 borderRadius: '20px',
                                 padding: '40px',
                                 color: '#fff',
@@ -158,7 +158,7 @@ const Networking: React.FC = () => {
                                             fontSize: '15px',
                                             lineHeight: 1.6,
                                         }}>
-                                            <span style={{ color: '#8bc34a', fontSize: '18px' }}>✓</span>
+                                            <span style={{ color: '#F0CC00', fontSize: '18px' }}>✓</span>
                                             {item}
                                         </li>
                                     ))}
@@ -187,13 +187,13 @@ const Networking: React.FC = () => {
                         alignItems: 'center',
                         gap: '10px',
                         padding: '16px 40px',
-                        backgroundColor: '#2e7d32',
+                        backgroundColor: '#228B22',
                         color: '#fff',
                         borderRadius: '30px',
                         textDecoration: 'none',
                         fontWeight: 600,
                         fontSize: '16px',
-                        boxShadow: '0 4px 20px rgba(46, 125, 50, 0.5)',
+                        boxShadow: '0 4px 20px rgba(34, 139, 34, 0.5)',
                     }}>
                         🤝 Make a Donation
                     </a>

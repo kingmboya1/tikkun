@@ -69,7 +69,7 @@ const Home: React.FC = () => {
                     width: '300px',
                     height: '300px',
                     borderRadius: '50%',
-                    border: '30px solid rgba(46, 125, 50, 0.05)',
+                    border: '30px solid rgba(34, 139, 34, 0.05)',
                 }}></div>
                 <div style={{
                     position: 'absolute',
@@ -78,7 +78,7 @@ const Home: React.FC = () => {
                     width: '250px',
                     height: '250px',
                     borderRadius: '50%',
-                    border: '25px solid rgba(46, 125, 50, 0.05)',
+                    border: '25px solid rgba(34, 139, 34, 0.05)',
                 }}></div>
 
                 <div className="auto-container">
@@ -92,8 +92,8 @@ const Home: React.FC = () => {
                             <span style={{
                                 display: 'inline-block',
                                 padding: '8px 20px',
-                                backgroundColor: 'rgba(46, 125, 50, 0.1)',
-                                color: '#2e7d32',
+                                backgroundColor: 'rgba(34, 139, 34, 0.1)',
+                                color: '#228B22',
                                 borderRadius: '25px',
                                 fontSize: '14px',
                                 fontWeight: 600,
@@ -125,13 +125,13 @@ const Home: React.FC = () => {
                                 alignItems: 'center',
                                 gap: '10px',
                                 padding: '14px 30px',
-                                backgroundColor: '#2e7d32',
+                                backgroundColor: '#228B22',
                                 color: '#fff',
                                 borderRadius: '30px',
                                 textDecoration: 'none',
                                 fontWeight: 600,
                                 transition: 'all 0.3s ease',
-                                boxShadow: '0 4px 15px rgba(46, 125, 50, 0.3)',
+                                boxShadow: '0 4px 15px rgba(34, 139, 34, 0.3)',
                             }}>
                                 Read More →
                             </a>
@@ -200,8 +200,8 @@ const Home: React.FC = () => {
                             <span style={{
                                 display: 'inline-block',
                                 padding: '8px 20px',
-                                backgroundColor: 'rgba(230, 126, 34, 0.1)',
-                                color: '#e67e22',
+                                backgroundColor: 'rgba(240, 204, 0, 0.18)',
+                                color: '#7A6000',
                                 borderRadius: '25px',
                                 fontSize: '14px',
                                 fontWeight: 600,
@@ -233,13 +233,13 @@ const Home: React.FC = () => {
                                 alignItems: 'center',
                                 gap: '10px',
                                 padding: '14px 30px',
-                                backgroundColor: '#e67e22',
-                                color: '#fff',
+                                backgroundColor: '#F0CC00',
+                                color: '#1a1a1a',
                                 borderRadius: '30px',
                                 textDecoration: 'none',
                                 fontWeight: 600,
                                 transition: 'all 0.3s ease',
-                                boxShadow: '0 4px 15px rgba(230, 126, 34, 0.3)',
+                                boxShadow: '0 4px 15px rgba(240, 204, 0, 0.4)',
                             }}>
                                 Read More →
                             </a>
@@ -302,7 +302,7 @@ const Home: React.FC = () => {
                     top: 0,
                     bottom: 0,
                     width: '150px',
-                    background: 'linear-gradient(180deg, transparent, rgba(46, 125, 50, 0.3), transparent)',
+                    background: 'linear-gradient(180deg, transparent, rgba(34, 139, 34, 0.3), transparent)',
                     transform: 'skewX(-15deg) translateX(-50px)',
                 }}></div>
 
@@ -327,27 +327,27 @@ const Home: React.FC = () => {
                     <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
                         <a href="/donate" style={{
                             padding: '16px 40px',
-                            backgroundColor: '#2e7d32',
+                            backgroundColor: '#228B22',
                             color: '#fff',
                             borderRadius: '30px',
                             textDecoration: 'none',
                             fontWeight: 600,
                             fontSize: '16px',
                             transition: 'all 0.3s ease',
-                            boxShadow: '0 4px 20px rgba(46, 125, 50, 0.5)',
+                            boxShadow: '0 4px 20px rgba(34, 139, 34, 0.5)',
                         }}>
                             💚 Donate Now
                         </a>
                         <a href="#" style={{
                             padding: '16px 40px',
-                            backgroundColor: '#e67e22',
-                            color: '#fff',
+                            backgroundColor: '#F0CC00',
+                            color: '#1a1a1a',
                             borderRadius: '30px',
                             textDecoration: 'none',
                             fontWeight: 600,
                             fontSize: '16px',
                             transition: 'all 0.3s ease',
-                            boxShadow: '0 4px 20px rgba(230, 126, 34, 0.5)',
+                            boxShadow: '0 4px 20px rgba(240, 204, 0, 0.5)',
                         }}>
                             🤝 Volunteer Now
                         </a>
@@ -475,7 +475,7 @@ const Home: React.FC = () => {
                     width: '200px',
                     height: '200px',
                     borderRadius: '50%',
-                    border: '20px solid rgba(46, 125, 50, 0.05)',
+                    border: '20px solid rgba(34, 139, 34, 0.05)',
                 }}></div>
                 <div style={{
                     position: 'absolute',
@@ -484,7 +484,7 @@ const Home: React.FC = () => {
                     width: '150px',
                     height: '150px',
                     borderRadius: '50%',
-                    border: '15px solid rgba(46, 125, 50, 0.05)',
+                    border: '15px solid rgba(34, 139, 34, 0.05)',
                 }}></div>
 
                 <div className="auto-container">
@@ -497,8 +497,8 @@ const Home: React.FC = () => {
                             <span style={{
                                 display: 'inline-block',
                                 padding: '8px 20px',
-                                backgroundColor: 'rgba(46, 125, 50, 0.1)',
-                                color: '#2e7d32',
+                                backgroundColor: 'rgba(34, 139, 34, 0.1)',
+                                color: '#228B22',
                                 borderRadius: '25px',
                                 fontSize: '14px',
                                 fontWeight: 600,
@@ -530,13 +530,13 @@ const Home: React.FC = () => {
                                 alignItems: 'center',
                                 gap: '10px',
                                 padding: '14px 30px',
-                                backgroundColor: '#2e7d32',
+                                backgroundColor: '#228B22',
                                 color: '#fff',
                                 borderRadius: '30px',
                                 textDecoration: 'none',
                                 fontWeight: 600,
                                 transition: 'all 0.3s ease',
-                                boxShadow: '0 4px 15px rgba(46, 125, 50, 0.3)',
+                                boxShadow: '0 4px 15px rgba(34, 139, 34, 0.3)',
                             }}>
                                 Our Pillars →
                             </a>

@@ -40,7 +40,7 @@ const NotFound: React.FC = () => {
                     <Link to="/" style={{
                         display: 'inline-block',
                         padding: '14px 32px',
-                        backgroundColor: '#2e7d32',
+                        backgroundColor: '#228B22',
                         color: '#fff',
                         borderRadius: '30px',
                         textDecoration: 'none',

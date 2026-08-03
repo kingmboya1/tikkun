@@ -61,7 +61,7 @@ const Climate: React.FC = () => {
                 <div style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(46, 125, 50, 0.6) 100%)',
+                    background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(34, 139, 34, 0.6) 100%)',
                 }}></div>
                 <div className="auto-container" style={{
                     position: 'relative',
@@ -157,7 +157,7 @@ const Climate: React.FC = () => {
                         </div>
                         <div>
                             <div style={{
-                                background: 'linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)',
+                                background: 'linear-gradient(135deg, #228B22 0%, #176B17 100%)',
                                 borderRadius: '20px',
                                 padding: '40px',
                                 color: '#fff',
@@ -180,7 +180,7 @@ const Climate: React.FC = () => {
                                             fontSize: '15px',
                                             lineHeight: 1.6,
                                         }}>
-                                            <span style={{ color: '#8bc34a', fontSize: '18px' }}>✓</span>
+                                            <span style={{ color: '#F0CC00', fontSize: '18px' }}>✓</span>
                                             {item}
                                         </li>
                                     ))}
@@ -206,8 +206,8 @@ const Climate: React.FC = () => {
                         <span style={{
                             display: 'inline-block',
                             padding: '8px 20px',
-                            backgroundColor: 'rgba(46,125,50,0.1)',
-                            color: '#2e7d32',
+                            backgroundColor: 'rgba(34,139,34,0.1)',
+                            color: '#228B22',
                             borderRadius: '25px',
                             fontSize: '14px',
                             fontWeight: 600,
@@ -269,7 +269,7 @@ const Climate: React.FC = () => {
                                 padding: '20px',
                                 textAlign: 'center',
                             }}>
-                                <div style={{ fontSize: '28px', fontWeight: 700, color: '#2e7d32' }}>15+</div>
+                                <div style={{ fontSize: '28px', fontWeight: 700, color: '#228B22' }}>15+</div>
                                 <div style={{ fontSize: '14px', color: '#666' }}>Volunteers &amp; neighboring households</div>
                             </div>
                             <div style={{
@@ -278,7 +278,7 @@ const Climate: React.FC = () => {
                                 padding: '20px',
                                 textAlign: 'center',
                             }}>
-                                <div style={{ fontSize: '28px', fontWeight: 700, color: '#2e7d32' }}>3</div>
+                                <div style={{ fontSize: '28px', fontWeight: 700, color: '#228B22' }}>3</div>
                                 <div style={{ fontSize: '14px', color: '#666' }}>Partner organizations</div>
                             </div>
                         </div>
@@ -291,7 +291,7 @@ const Climate: React.FC = () => {
                                     { code: 'SDG 15', label: 'Life on Land' },
                                 ].map((sdg, i) => (
                                     <span key={i} style={{
-                                        backgroundColor: '#2e7d32',
+                                        backgroundColor: '#228B22',
                                         color: '#fff',
                                         padding: '8px 16px',
                                         borderRadius: '20px',
@@ -327,8 +327,8 @@ const Climate: React.FC = () => {
                         <span style={{
                             display: 'inline-block',
                             padding: '8px 20px',
-                            backgroundColor: 'rgba(46,125,50,0.1)',
-                            color: '#2e7d32',
+                            backgroundColor: 'rgba(34,139,34,0.1)',
+                            color: '#228B22',
                             borderRadius: '25px',
                             fontSize: '14px',
                             fontWeight: 600,
@@ -398,7 +398,7 @@ const Climate: React.FC = () => {
                                     { code: 'SDG 17', label: 'Partnerships for the Goals' },
                                 ].map((sdg, i) => (
                                     <span key={i} style={{
-                                        backgroundColor: '#2e7d32',
+                                        backgroundColor: '#228B22',
                                         color: '#fff',
                                         padding: '8px 16px',
                                         borderRadius: '20px',
@@ -430,13 +430,13 @@ const Climate: React.FC = () => {
                         alignItems: 'center',
                         gap: '10px',
                         padding: '16px 40px',
-                        backgroundColor: '#2e7d32',
+                        backgroundColor: '#228B22',
                         color: '#fff',
                         borderRadius: '30px',
                         textDecoration: 'none',
                         fontWeight: 600,
                         fontSize: '16px',
-                        boxShadow: '0 4px 20px rgba(46, 125, 50, 0.5)',
+                        boxShadow: '0 4px 20px rgba(34, 139, 34, 0.5)',
                     }}>
                         🌱 Make a Donation
                     </a>

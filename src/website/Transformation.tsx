@@ -60,7 +60,7 @@ const Transformation: React.FC = () => {
                 <div style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(46, 125, 50, 0.6) 100%)',
+                    background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(34, 139, 34, 0.6) 100%)',
                 }}></div>
                 <div className="auto-container" style={{
                     position: 'relative',
@@ -156,7 +156,7 @@ const Transformation: React.FC = () => {
                         </div>
                         <div>
                             <div style={{
-                                background: 'linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)',
+                                background: 'linear-gradient(135deg, #228B22 0%, #176B17 100%)',
                                 borderRadius: '20px',
                                 padding: '40px',
                                 color: '#fff',
@@ -179,7 +179,7 @@ const Transformation: React.FC = () => {
                                             fontSize: '15px',
                                             lineHeight: 1.6,
                                         }}>
-                                            <span style={{ color: '#8bc34a', fontSize: '18px' }}>✓</span>
+                                            <span style={{ color: '#F0CC00', fontSize: '18px' }}>✓</span>
                                             {item}
                                         </li>
                                     ))}
@@ -196,8 +196,8 @@ const Transformation: React.FC = () => {
                         <span style={{
                             display: 'inline-block',
                             padding: '8px 20px',
-                            backgroundColor: 'rgba(46,125,50,0.1)',
-                            color: '#2e7d32',
+                            backgroundColor: 'rgba(34,139,34,0.1)',
+                            color: '#228B22',
                             borderRadius: '25px',
                             fontSize: '14px',
                             fontWeight: 600,
@@ -236,23 +236,23 @@ const Transformation: React.FC = () => {
                         </h3>
                         <div className="grid-2" style={{ gap: '20px' }}>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                                <span style={{ color: '#2e7d32', fontWeight: 700 }}>SDG 3</span>
+                                <span style={{ color: '#228B22', fontWeight: 700 }}>SDG 3</span>
                                 <p style={{ fontSize: '15px', color: '#555', margin: 0 }}>Good Health & Well-being — mental health, life skills, and menstrual health through sanitary pad provision.</p>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                                <span style={{ color: '#2e7d32', fontWeight: 700 }}>SDG 4</span>
+                                <span style={{ color: '#228B22', fontWeight: 700 }}>SDG 4</span>
                                 <p style={{ fontSize: '15px', color: '#555', margin: 0 }}>Quality Education — supporting exam candidates by reducing barriers to attendance and concentration.</p>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                                <span style={{ color: '#2e7d32', fontWeight: 700 }}>SDG 5</span>
+                                <span style={{ color: '#228B22', fontWeight: 700 }}>SDG 5</span>
                                 <p style={{ fontSize: '15px', color: '#555', margin: 0 }}>Gender Equality — empowering girls through menstrual dignity and boys through equitable support.</p>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                                <span style={{ color: '#2e7d32', fontWeight: 700 }}>SDG 6</span>
+                                <span style={{ color: '#228B22', fontWeight: 700 }}>SDG 6</span>
                                 <p style={{ fontSize: '15px', color: '#555', margin: 0 }}>Clean Water & Sanitation — advocacy for access to facilities and hygiene resources.</p>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                                <span style={{ color: '#2e7d32', fontWeight: 700 }}>SDG 17</span>
+                                <span style={{ color: '#228B22', fontWeight: 700 }}>SDG 17</span>
                                 <p style={{ fontSize: '15px', color: '#555', margin: 0 }}>Partnerships for the Goals — collaboration with Yasmin Girl Empowerment, Global Ministries For Christ, and other stakeholders.</p>
                             </div>
                         </div>
@@ -265,8 +265,8 @@ const Transformation: React.FC = () => {
                         <span style={{
                             display: 'inline-block',
                             padding: '8px 20px',
-                            backgroundColor: 'rgba(46,125,50,0.1)',
-                            color: '#2e7d32',
+                            backgroundColor: 'rgba(34,139,34,0.1)',
+                            color: '#228B22',
                             borderRadius: '25px',
                             fontSize: '14px',
                             fontWeight: 600,
@@ -324,13 +324,13 @@ const Transformation: React.FC = () => {
                         alignItems: 'center',
                         gap: '10px',
                         padding: '16px 40px',
-                        backgroundColor: '#2e7d32',
+                        backgroundColor: '#228B22',
                         color: '#fff',
                         borderRadius: '30px',
                         textDecoration: 'none',
                         fontWeight: 600,
                         fontSize: '16px',
-                        boxShadow: '0 4px 20px rgba(46, 125, 50, 0.5)',
+                        boxShadow: '0 4px 20px rgba(34, 139, 34, 0.5)',
                     }}>
                         💚 Make a Donation
                     </a>

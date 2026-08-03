@@ -33,7 +33,7 @@ const EventDetail: React.FC = () => {
                             alignItems: 'center',
                             gap: '8px',
                             padding: '14px 32px',
-                            backgroundColor: '#2e7d32',
+                            backgroundColor: '#228B22',
                             color: '#fff',
                             borderRadius: '30px',
                             textDecoration: 'none',
@@ -70,7 +70,7 @@ const EventDetail: React.FC = () => {
                 <div style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(46,125,50,0.55) 100%)',
+                    background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(34,139,34,0.55) 100%)',
                 }}></div>
                 <div className="auto-container" style={{
                     position: 'relative',
@@ -141,8 +141,8 @@ const EventDetail: React.FC = () => {
                         <span style={{
                             display: 'inline-block',
                             padding: '8px 20px',
-                            backgroundColor: 'rgba(46,125,50,0.1)',
-                            color: '#2e7d32',
+                            backgroundColor: 'rgba(34,139,34,0.1)',
+                            color: '#228B22',
                             borderRadius: '25px',
                             fontSize: '14px',
                             fontWeight: 600,
@@ -172,8 +172,8 @@ const EventDetail: React.FC = () => {
                         <span style={{
                             display: 'inline-block',
                             padding: '8px 20px',
-                            backgroundColor: 'rgba(46,125,50,0.1)',
-                            color: '#2e7d32',
+                            backgroundColor: 'rgba(34,139,34,0.1)',
+                            color: '#228B22',
                             borderRadius: '25px',
                             fontSize: '14px',
                             fontWeight: 600,
@@ -218,8 +218,8 @@ const EventDetail: React.FC = () => {
                             <span style={{
                                 display: 'inline-block',
                                 padding: '8px 20px',
-                                backgroundColor: 'rgba(46,125,50,0.1)',
-                                color: '#2e7d32',
+                                backgroundColor: 'rgba(34,139,34,0.1)',
+                                color: '#228B22',
                                 borderRadius: '25px',
                                 fontSize: '14px',
                                 fontWeight: 600,
@@ -241,7 +241,7 @@ const EventDetail: React.FC = () => {
                                             gap: '10px',
                                             padding: '14px 24px',
                                             backgroundColor: '#f8f9fa',
-                                            color: '#2e7d32',
+                                            color: '#228B22',
                                             borderRadius: '12px',
                                             textDecoration: 'none',
                                             fontWeight: 600,
@@ -268,13 +268,13 @@ const EventDetail: React.FC = () => {
                         alignItems: 'center',
                         gap: '10px',
                         padding: '14px 36px',
-                        backgroundColor: '#2e7d32',
+                        backgroundColor: '#228B22',
                         color: '#fff',
                         borderRadius: '30px',
                         textDecoration: 'none',
                         fontWeight: 600,
                         fontSize: '15px',
-                        boxShadow: '0 4px 20px rgba(46,125,50,0.35)',
+                        boxShadow: '0 4px 20px rgba(34,139,34,0.35)',
                     }}>
                         ← Back to Events
                     </Link>
