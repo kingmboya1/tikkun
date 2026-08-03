@@ -212,31 +212,31 @@ const Gallery: React.FC = () => {
         {
             id: 35,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth1.jpg`,
-            categories: ['Organization and Capacity Building'],
+            categories: ['Transformative Education & Empowerment'],
             alt: "Youth"
         },
         {
             id: 36,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth2.jpg`,
-            categories: ['Organization and Capacity Building'],
+            categories: ['Transformative Education & Empowerment'],
             alt: "Youth"
         },
         {
             id: 37,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth3.jpg`,
-            categories: ['Organization and Capacity Building'],
+            categories: ['Transformative Education & Empowerment'],
             alt: "Youth"
         },
         {
             id: 38,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth4.jpg`,
-            categories: ['Organization and Capacity Building'],
+            categories: ['Transformative Education & Empowerment'],
             alt: "Youth"
         },
         {
             id: 39,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth5.jpg`,
-            categories: ['Organization and Capacity Building'],
+            categories: ['Transformative Education & Empowerment'],
             alt: "Youth"
         },
         {
@@ -272,13 +272,13 @@ const Gallery: React.FC = () => {
         {
             id: 45,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/canada_1.jpg`,
-            categories: ['Networking and Partnerships'],
+            categories: ['Organization and Capacity Building'],
             alt: "Canada DE"
         },
         {
             id: 46,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/canada_2.jpg`,
-            categories: ['Networking and Partnerships'],
+            categories: ['Organization and Capacity Building'],
             alt: "Canada DE Graduation"
         },
 
