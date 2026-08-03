@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
                                             <Link to="/"><img src={`${process.env.PUBLIC_URL}/assets/images/sticky-logo.png`} alt="" /></Link>
                                         </div>
                                         <div className="text">
-                                            <p> <strong>Tikkun Africa </strong> Foundation is dedicated to bringing hope to communities, environmental, governance and human rights systems by offering sustainable solutions for growth, restoration, and positive transformation at a global scale.</p>
+                                            <p> <strong>Tikkun Africa </strong> Foundation is dedicated to bring Hope to the communities by supporting programs on Environmental, Social, Economical, Governance and Human Rights.</p>
 
                                         </div>
                                         <ul className="social-links clearfix">
