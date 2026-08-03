@@ -38,6 +38,9 @@
 	}
 
 	//Mobile Nav Hide Show
+	// COMMENTED OUT - React handles mobile menu state via mobileMenuOpen useState
+	// Keeping this block for reference in case we need to restore jQuery behavior
+	/*
 	if($('.mobile-menu').length){
 		
 		$('.mobile-menu .menu-box').mCustomScrollbar();
@@ -61,6 +64,7 @@
 			$('body').removeClass('mobile-menu-visible');
 		});
 	}
+	*/
 	
 	//Search Popup
 	if($('#search-popup').length){

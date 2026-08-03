@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import '../styles/mobile-menu.css'
 import '../styles/mobile-header-fix.css'
@@ -102,6 +103,10 @@ const Headers: React.FC = () => {
                     </div>
                 </div>
 
+            </header>
+
+            {/* Mobile menu rendered via Portal to avoid stacking context issues from header */}
+            {createPortal(
                 <div className={`mobile-menu ${mobileMenuOpen ? 'active' : ''}`}>
                     <div className="menu-backdrop" onClick={() => setMobileMenuOpen(false)}></div>
                     <div className="close-btn" onClick={() => setMobileMenuOpen(false)}><span className="icon flaticon-cancel"></span></div>
@@ -142,9 +147,9 @@ const Headers: React.FC = () => {
                             </ul>
                         </div>
                     </nav>
-                </div>
-
-            </header>
+                </div>,
+                document.body
+            )}
 
         </>
 

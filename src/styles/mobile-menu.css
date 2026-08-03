@@ -1,12 +1,37 @@
-.mobile-nav-toggler {
+/* Increased specificity to match/exceed legacy CSS (.nav-outer .mobile-nav-toggler) */
+.nav-outer .mobile-nav-toggler {
     display: none;
     cursor: pointer;
     font-size: 28px;
+    /* Explicit dimensions for reliable clickable area */
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    /* Ensure toggler stays above other elements */
+    z-index: 100;
+    position: relative;
+}
+
+/* Fallback hamburger icon if flaticon font fails to load */
+.nav-outer .mobile-nav-toggler::before {
+    content: '☰';
+    font-size: 28px;
+    line-height: 1;
+    color: #228B22;
+    position: absolute;
+    display: block;
+}
+
+/* Hide fallback when real icon loads (flaticon will render in the span) */
+.nav-outer .mobile-nav-toggler .icon {
+    z-index: 1;
+    position: relative;
 }
 
 @media (max-width: 991px) {
-    .mobile-nav-toggler {
-        display: block;
+    .nav-outer .mobile-nav-toggler {
+        display: flex !important;
     }
     .nav-outer .main-menu {
         display: none !important;
@@ -82,6 +107,10 @@
     color: #222 !important;
 }
 
+.mobile-menu .close-btn:hover {
+    color: #228B22;
+}
+
 .mobile-menu .navigation {
     list-style: none;
     padding: 0;
@@ -102,4 +131,25 @@
 .mobile-menu .navigation li ul {
     list-style: none;
     padding-left: 15px;
+}
+
+/* Temporary workaround: keep submenus always visible until React dropdown state is implemented */
+.mobile-menu .navigation li.dropdown > ul {
+    display: block !important;
+    padding-left: 15px;
+}
+
+/* Override social links color for white background */
+.mobile-menu .social-links li a {
+    color: #222;
+}
+
+.mobile-menu .social-links li a:hover {
+    color: #228B22;
+}
+
+/* Override dropdown button color if used */
+.mobile-menu .navigation li.dropdown .dropdown-btn {
+    color: #222;
+    background: rgba(0,0,0,0.05);
 }

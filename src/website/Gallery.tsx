@@ -23,7 +23,7 @@ const Gallery: React.FC = () => {
         `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-09.jpg`,
         `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-15.jpg`,
         `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-06.jpg`,
-        `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-01.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/women_5.jpg`,
     ];
     const [bannerSlide, setBannerSlide] = useState(0);
 
@@ -52,592 +52,531 @@ const Gallery: React.FC = () => {
     }, [pageBgSlides.length]);
 
     const galleryItems: GalleryItem[] = [
+        // 1. Malawi Group
         {
-            id: 4,
+            id: 1,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/malawi_1.jpg`,
             categories: ['Networking and Partnerships'],
             alt: "Malawi GWLN"
         },
-
         {
             id: 2,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/malawi_2.jpg`,
             categories: ['Networking and Partnerships'],
             alt: "Malawi GWLN Group"
         },
-
         {
-            id: 1,
+            id: 3,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/malawi_3.jpg`,
             categories: ['Networking and Partnerships'],
             alt: "Malawi GWLN Class"
         },
-
         {
-            id: 6,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/canada_2.jpg`,
-            categories: ['Networking and Partnerships'],
-            alt: "Canada DE Graduation"
+            id: 4,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/malawi_10.jpg`,
+            categories: ["Transformative Education & Empowerment"],
+            alt: "Women"
         },
-
         {
-            id: 12,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening_1.jpg`,
-            categories: ['Climate Action & Renewable Energy'],
-            alt: "Ongata Greening"
-        },
-
-        {
-            id: 13,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening_2.jpg`,
-            categories: ['Climate Action & Renewable Energy'],
-            alt: "Ongata Greening"
-        },
-
-        {
-            id: 69,
+            id: 5,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/malawi_11.jpg`,
             categories: ["Transformative Education & Empowerment"],
             alt: "Women"
         },
-
         {
-            id: 68,
+            id: 6,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/malawi_12.jpg`,
             categories: ["Transformative Education & Empowerment"],
             alt: "Women"
         },
 
-        {
-            id: 67,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/malawi_10.jpg`,
-            categories: ["Transformative Education & Empowerment"],
-            alt: "Women"
-        },
 
+        // 2. Women Group
         {
-            id: 53,
+            id: 10,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/women_1.jpg`,
             categories: ["Transformative Education & Empowerment"],
             alt: "Women"
         },
-
         {
-            id: 54,
+            id: 11,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/women_2.jpg`,
             categories: ["Transformative Education & Empowerment"],
             alt: "Women"
         },
-
         {
-            id: 81,
+            id: 12,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/women_3.jpg`,
             categories: ["Transformative Education & Empowerment"],
             alt: "Women"
         },
-
         {
-            id: 80,
+            id: 13,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/women_4.jpg`,
             categories: ["Transformative Education & Empowerment"],
             alt: "Women"
         },
-
         {
-            id: 92,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/children_1.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Youth"
+            id: 14,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/women_5.jpg`,
+            categories: ["Transformative Education & Empowerment"],
+            alt: "Women Empowerment"
+        },
+        {
+            id: 15,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_1.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "MSA Farm Kits"
+        },
+        {
+            id: 16,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_5.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Climate Action & Renewable Energy"
+        },
+        {
+            id: 17,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/women_6.jpg`,
+            categories: ["Transformative Education & Empowerment"],
+            alt: "Women"
         },
 
+
+        // 3. Tollen Group
         {
-            id: 31,
+            id: 20,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_1.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Tollen"
+        },
+        {
+            id: 21,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_2.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Tollen"
+        },
+        {
+            id: 22,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_3.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Tollen"
+        },
+        {
+            id: 23,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_4.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Tollen"
+        },
+        {
+            id: 24,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_5.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Tollen"
+        },
+        {
+            id: 25,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_6.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Tollen"
+        },
+        {
+            id: 27,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_8.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Tollen"
         },
 
-        {
-            id: 42,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_10.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
-        },
 
-        {
-            id: 43,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_11.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
-        },
-
-        {
-            id: 33,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_after_1.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
-        },
-
-        {
-            id: 34,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_after_2.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
-        },
-
-        {
-            id: 35,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_after_3.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
-        },
-
+        // 4. Tollen After Group
         {
             id: 30,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_7.jpg`,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_after_1.jpg`,
             categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
+            alt: "Tollen After"
+        },
+        {
+            id: 31,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_after_2.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Tollen After"
+        },
+        {
+            id: 32,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_after_3.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Tollen After"
         },
 
-        {
-            id: 24,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_1.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
-        },
 
+        // 5. Youth Group
         {
-            id: 25,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_2.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
-        },
-
-        {
-            id: 28,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_5.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
-        },
-
-        {
-            id: 44,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_12.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
-        },
-
-        {
-            id: 98,
+            id: 35,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth1.jpg`,
             categories: ['Organization and Capacity Building'],
-            alt: "Women"
+            alt: "Youth"
         },
-
         {
-            id: 99,
+            id: 36,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth2.jpg`,
             categories: ['Organization and Capacity Building'],
-            alt: "Women"
+            alt: "Youth"
         },
-
         {
-            id: 100,
+            id: 37,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth3.jpg`,
             categories: ['Organization and Capacity Building'],
-            alt: "Women"
+            alt: "Youth"
         },
-
         {
-            id: 29,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_6.jpg`,
+            id: 38,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth4.jpg`,
+            categories: ['Organization and Capacity Building'],
+            alt: "Youth"
+        },
+        {
+            id: 39,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/youth5.jpg`,
+            categories: ['Organization and Capacity Building'],
+            alt: "Youth"
+        },
+        {
+            id: 40,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/children_1.jpg`,
             categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
+            alt: "Youth"
         },
 
-        {
-            id: 45,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_13.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
-        },
 
+        // 6. Tollen Children Group
         {
-            id: 49,
+            id: 41,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_children_4.jpg`,
             categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
+            alt: "Tollen Children"
         },
-
         {
-            id: 51,
+            id: 42,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_children_6.jpg`,
             categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
+            alt: "Tollen Children"
         },
-
         {
-            id: 52,
+            id: 43,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_children_7.jpg`,
             categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
+            alt: "Tollen Children"
         },
 
+
+        // 7. Canada Group
         {
-            id: 26,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_3.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen"
+            id: 45,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/canada_1.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Canada DE"
+        },
+        {
+            id: 46,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/canada_2.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Canada DE Graduation"
         },
 
+
+        // 8. Conf Group
         {
-            id: 102,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-01.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Jasmin Girls Empowerment"
+            id: 50,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/conf_1.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Malawi Annual Youth Conference"
+        },
+        {
+            id: 51,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/conf_2.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Malawi Annual Youth Conference"
+        },
+        {
+            id: 52,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/conf_4.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Malawi Annual Youth Conference"
+        },
+        {
+            id: 53,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/conf_6.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Malawi Annual Youth Conference"
+        },
+        {
+            id: 54,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/conf_8.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Malawi Annual Youth Conference"
         },
 
+
+        // 9. Jasmin Girls Empowerment Group (02-15 only, excluding 01, 03, 04)
         {
-            id: 103,
+            id: 60,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-02.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
-
         {
-            id: 106,
+            id: 61,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-05.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
-
         {
-            id: 107,
+            id: 62,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-06.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
-
         {
-            id: 108,
+            id: 63,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-07.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
-
         {
-            id: 109,
+            id: 64,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-08.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
-
         {
-            id: 110,
+            id: 65,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-09.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
-
         {
-            id: 111,
+            id: 66,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-10.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
-
         {
-            id: 112,
+            id: 67,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-11.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
-
         {
-            id: 113,
+            id: 68,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-12.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
-
         {
-            id: 114,
+            id: 69,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-13.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
-
         {
-            id: 115,
+            id: 70,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-14.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
-
         {
-            id: 116,
+            id: 71,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-15.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
 
-        {
-            id: 8,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_2.jpg`,
-            categories: ['Climate Action & Renewable Energy'],
-            alt: "MSA Farm Kits"
-        },
 
+        // 10. Community Cleanup Group
         {
-            id: 9,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_3.jpg`,
-            categories: ['Climate Action & Renewable Energy'],
-            alt: "Climate Action & Renewable Energy"
-        },
-
-        {
-            id: 39,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_7.jpg`,
-            categories: ['Climate Action & Renewable Energy'],
-            alt: "Climate Action & Renewable Energy"
-        },
-
-        {
-            id: 40,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_8.jpg`,
-            categories: ['Climate Action & Renewable Energy'],
-            alt: "Climate Action & Renewable Energy"
-        },
-
-        {
-            id: 7,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_1.jpg`,
-            categories: ['Climate Action & Renewable Energy'],
-            alt: "MSA Farm Kits"
-        },
-
-        {
-            id: 37,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_5.jpg`,
-            categories: ['Climate Action & Renewable Energy'],
-            alt: "Climate Action & Renewable Energy"
-        },
-
-        {
-            id: 41,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_9.jpg`,
-            categories: ['Climate Action & Renewable Energy'],
-            alt: "Climate Action & Renewable Energy"
-        },
-
-        {
-            id: 15,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/conf_1.jpg`,
-            categories: ['Networking and Partnerships'],
-            alt: "Maalawi Annual Youth Conference"
-        },
-
-        {
-            id: 5,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/canada_1.jpg`,
-            categories: ['Networking and Partnerships'],
-            alt: "Canada DE"
-        },
-
-        {
-            id: 16,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/conf_2.jpg`,
-            categories: ['Networking and Partnerships'],
-            alt: "Maalawi Annual Youth Conference"
-        },
-
-        {
-            id: 18,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/conf_4.jpg`,
-            categories: ['Networking and Partnerships'],
-            alt: "Maalawi Annual Youth Conference"
-        },
-
-        {
-            id: 20,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/conf_6.jpg`,
-            categories: ['Networking and Partnerships'],
-            alt: "Maalawi Annual Youth Conference"
-        },
-
-        {
-            id: 22,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/conf_8.jpg`,
-            categories: ['Networking and Partnerships'],
-            alt: "Maalawi Annual Youth Conference"
-        },
-
-        {
-            id: 97,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community_3.jpg`,
-            categories: ['Networking and Partnerships'],
-            alt: "Women"
-        },
-
-        {
-            id: 117,
+            id: 80,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-01.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
-
         {
-            id: 118,
+            id: 81,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-02.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
-
         {
-            id: 119,
+            id: 82,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-03.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
-
         {
-            id: 120,
+            id: 83,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-04.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
-
         {
-            id: 121,
+            id: 84,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-05.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
-
         {
-            id: 122,
+            id: 85,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-06.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
-
         {
-            id: 123,
+            id: 86,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-07.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
-
         {
-            id: 124,
+            id: 87,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-08.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
-
         {
-            id: 125,
+            id: 88,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-09.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
-
         {
-            id: 126,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-10.jpg`,
-            categories: ['Climate Action & Renewable Energy'],
-            alt: "Community Cleanup"
-        },
-
-        {
-            id: 127,
+            id: 90,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-11.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Community Cleanup"
         },
-
         {
-            id: 128,
+            id: 91,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community_3.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Community"
+        },
+
+
+        // 11. Climate Group
+        {
+            id: 100,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_2.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Climate Action"
+        },
+        {
+            id: 101,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_3.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Climate Action"
+        },
+        {
+            id: 102,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_7.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Climate Action"
+        },
+        {
+            id: 103,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_8.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Climate Action"
+        },
+        {
+            id: 104,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_9.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Climate Action"
+        },
+        {
+            id: 105,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/climate_10.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Climate Action"
+        },
+        {
+            id: 106,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening_1.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Ongata Greening"
+        },
+        {
+            id: 107,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening_2.jpg`,
+            categories: ['Climate Action & Renewable Energy'],
+            alt: "Ongata Greening"
+        },
+
+
+        // 12. Greening Drive Group
+        {
+            id: 110,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-01.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Tree Planting Drive"
         },
-
         {
-            id: 129,
+            id: 111,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-02.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Tree Planting Drive"
         },
-
         {
-            id: 130,
+            id: 112,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-03.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Tree Planting Drive"
         },
-
         {
-            id: 131,
+            id: 113,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-04.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Tree Planting Drive"
         },
-
         {
-            id: 132,
+            id: 114,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-05.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Tree Planting Drive"
         },
-
         {
-            id: 133,
+            id: 115,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-06.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Tree Planting Drive"
         },
-
         {
-            id: 134,
+            id: 116,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-07.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Tree Planting Drive"
         },
-
         {
-            id: 135,
+            id: 117,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-08.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Tree Planting Drive"
         },
-
         {
-            id: 136,
+            id: 118,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-09.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Tree Planting Drive"
         },
-
         {
-            id: 137,
+            id: 119,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-10.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Tree Planting Drive"
         },
-
         {
-            id: 138,
+            id: 120,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-11.jpg`,
             categories: ['Climate Action & Renewable Energy'],
             alt: "Tree Planting Drive"
-        },
-
-        {
-            id: 139,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/together-we-are-stronger.png`,
-            categories: ['Networking and Partnerships'],
-            alt: "Together, we are stronger"
         }
     ];
 
@@ -663,6 +602,9 @@ const Gallery: React.FC = () => {
     const filteredItems = activeFilter === 'all'
         ? galleryItems
         : galleryItems.filter(item => item.categories.includes(activeFilter));
+
+    // No sorting - preserve the exact order from galleryItems array (grouped by tag)
+    const sortedItems = filteredItems;
 
 
     return (
