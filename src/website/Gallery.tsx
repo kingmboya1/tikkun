@@ -105,12 +105,6 @@ const Gallery: React.FC = () => {
             alt: "Women"
         },
         {
-            id: 12,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/women_3.jpg`,
-            categories: ["Transformative Education & Empowerment"],
-            alt: "Women"
-        },
-        {
             id: 13,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/women_4.jpg`,
             categories: ["Transformative Education & Empowerment"],
