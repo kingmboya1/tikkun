@@ -120,7 +120,7 @@ const Home: React.FC = () => {
                             }}>
                                 Transform Women and Youth to self-reliance and creating sustainable opportunities and programs to support their Social, Environmental, Economic, Governance and human rights in Africa.
                             </p>
-                            <a href="/networking" style={{
+                            <a href="/pillars" style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
                                 gap: '10px',
@@ -228,7 +228,7 @@ const Home: React.FC = () => {
                             }}>
                                 Empower Women and Youth to advance in confidence, build resilience in developing the communities on sustainable practices in accordance to GRI.
                             </p>
-                            <a href="/networking" style={{
+                            <a href="/pillars" style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
                                 gap: '10px',
