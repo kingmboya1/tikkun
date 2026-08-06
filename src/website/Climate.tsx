@@ -258,6 +258,11 @@ const Climate: React.FC = () => {
                                 standards. The initiative reflects the strength of community partnerships
                                 working toward a shared goal, and reinforces the cleanliness and civic pride
                                 that residents already hold as part of their everyday household norms.</p>
+                            <p style={{ marginBottom: '20px' }}>Beyond immediate cleanup efforts, volunteers demonstrated practical recycling
+                                techniques by transforming collected waste materials into functional brooms.
+                                This hands-on session showed residents how to repurpose materials for everyday
+                                household use, extending the initiative's impact beyond a single cleanup event
+                                and reinforcing the message of sustainability through ongoing behavior change.</p>
                         </div>
                         <div className="grid-2" style={{
                             gap: '20px',
