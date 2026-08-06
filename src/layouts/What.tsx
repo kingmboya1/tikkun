@@ -4,7 +4,11 @@ const What: React.FC = () => {
 
     return(
         <section className="what-we-do style-two">
-            <div className="image-layer" style={{backgroundImage:`url(${process.env.PUBLIC_URL}/assets/images/background/bg4.jpg)`}}></div>
+            {/* The emblem is logo artwork on a white background, so it can't sit
+                in this slot as a cropped, 70%-darkened full-bleed photo - it just
+                turns into a grey slab. Use a brand gradient here instead and show
+                the emblem at full colour in the column below. */}
+            <div className="image-layer" style={{background:'linear-gradient(135deg, #176B17 0%, #0b2f0b 100%)'}}></div>
             <div className="top-rotten-curve"></div>
             <div className="bottom-rotten-curve"></div>
 
@@ -16,6 +20,18 @@ const What: React.FC = () => {
                                 <h2>How we impact the society?</h2>
                                 <div className="text">Here's how our 4 pillars directly impact the society.</div>
                             </div>
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/images/dove-emblem.png`}
+                                alt="Dove carrying an olive branch over a sunrise and seedling"
+                                style={{
+                                    display: 'block',
+                                    width: '100%',
+                                    maxWidth: '380px',
+                                    height: 'auto',
+                                    marginTop: '30px',
+                                    borderRadius: '16px',
+                                }}
+                            />
                         </div>
                     </div>
 
