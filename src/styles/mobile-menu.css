@@ -1,32 +1,26 @@
-/* Increased specificity to match/exceed legacy CSS (.nav-outer .mobile-nav-toggler) */
+/* ============================================
+   MOBILE MENU - REFINED VISUAL SPEC
+   ============================================ */
+
+/* Hamburger toggler */
 .nav-outer .mobile-nav-toggler {
     display: none;
     cursor: pointer;
     font-size: 28px;
-    /* Explicit dimensions for reliable clickable area */
     width: 40px;
     height: 40px;
     align-items: center;
     justify-content: center;
-    /* Ensure toggler stays above other elements */
     z-index: 100;
     position: relative;
 }
 
-/* Fallback hamburger icon if flaticon font fails to load */
-.nav-outer .mobile-nav-toggler::before {
-    content: '☰';
-    font-size: 28px;
-    line-height: 1;
-    color: #228B22;
-    position: absolute;
-    display: block;
-}
+/* Removed ::before fallback - flaticon font loads successfully */
 
-/* Hide fallback when real icon loads (flaticon will render in the span) */
 .nav-outer .mobile-nav-toggler .icon {
     z-index: 1;
     position: relative;
+    color: #228B22;
 }
 
 @media (max-width: 991px) {
@@ -38,39 +32,42 @@
     }
 }
 
-/* Slide this panel using the "right" offset rather than "transform" -
-   giving an element a transform (even a no-op translateX(0) once active)
-   makes it the fixed-positioning containing block for any position:fixed
-   descendants, which traps .menu-backdrop below inside this 300px panel
-   instead of covering the full screen. */
+/* ============================================
+   MOBILE MENU PANEL - NARROWER, FOCUSED
+   ============================================ */
 .mobile-menu {
     position: fixed;
     top: 0;
-    right: -320px;
+    right: 0;
     height: 100%;
-    width: 300px;
-    max-width: 85%;
+    width: 280px;
+    max-width: 80%;
     background: #fff;
     z-index: 99999;
-    transition: right 0.4s ease;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
     overflow-y: auto;
-    padding: 30px 20px;
+    padding: 0;
     visibility: hidden;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.12);
 }
 
 .mobile-menu.active {
-    right: 0;
+    transform: translateX(0);
     visibility: visible;
     opacity: 1;
 }
 
+/* ============================================
+   BACKDROP - CLEARLY DIMMED
+   ============================================ */
 .mobile-menu .menu-backdrop {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.65);
     z-index: -1;
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -81,15 +78,13 @@
     transform: translateX(0) !important;
 }
 
-/* The legacy theme's own .menu-box rule (from style.css) hides this element
-   by default with opacity:0/visibility:hidden, only revealing it via a
-   ".mobile-menu-visible" class on an ancestor that this React menu never
-   sets - it toggles "active" on .mobile-menu itself instead. Override all
-   three of the legacy hidden-state properties here, and swap its dark
-   #202020 background for white since the nav link text color below was
-   written assuming a light background. */
+/* ============================================
+   MENU BOX
+   ============================================ */
 .mobile-menu .menu-box {
     background: #fff !important;
+    padding: 70px 24px 30px;
+    min-height: 100%;
 }
 
 .mobile-menu.active .menu-box {
@@ -98,58 +93,255 @@
     visibility: visible !important;
 }
 
+/* ============================================
+   CLOSE BUTTON - MINIMAL ICON ONLY
+   ============================================ */
 .mobile-menu .close-btn {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 24px;
+    font-size: 22px;
     cursor: pointer;
-    color: #222 !important;
+    color: #999 !important;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    background: transparent;
+    transition: color 0.3s ease;
 }
 
 .mobile-menu .close-btn:hover {
-    color: #228B22;
+    color: #228B22 !important;
+    background: transparent;
+    transform: none;
 }
 
+/* ============================================
+   LOGO SECTION - COMPACT
+   ============================================ */
+.mobile-menu .nav-logo {
+    padding: 0 0 16px 0 !important;
+    border-bottom: none;
+    margin-bottom: 16px;
+}
+
+/* ============================================
+   PRIMARY CTA BUTTON - PROMINENT
+   ============================================ */
+.mobile-menu .primary-cta {
+    margin: 32px 0 40px;
+}
+
+.mobile-menu .primary-cta a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #228B22;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 24px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(34, 139, 34, 0.2);
+}
+
+.mobile-menu .primary-cta a:hover {
+    background: #1a6b1a;
+    box-shadow: 0 4px 12px rgba(34, 139, 34, 0.35);
+    transform: translateY(-1px);
+}
+
+.mobile-menu .primary-cta a svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ============================================
+   MENU SECTION LABEL
+   ============================================ */
+.mobile-menu .menu-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 20px;
+    padding-left: 4px;
+}
+
+/* ============================================
+   NAVIGATION - ICON + LABEL, GENEROUS SPACING
+   ============================================ */
 .mobile-menu .navigation {
     list-style: none;
     padding: 0;
-    margin: 60px 0 0;
+    margin: 0;
 }
 
-.mobile-menu .navigation li {
-    border-bottom: 1px solid #eee;
+.mobile-menu .navigation > li {
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
-.mobile-menu .navigation li a {
-    display: block;
-    padding: 12px 0;
-    color: #222;
+/* TOP-LEVEL NAV ITEMS - Icon + Label with generous spacing */
+.mobile-menu .navigation > li > a,
+.mobile-menu .navigation > li > span {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 8px;
+    color: #1a1a1a;
     text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    border-left: none;
+    transition: color 0.3s ease;
+    position: relative;
 }
 
+.mobile-menu .navigation > li > a:hover,
+.mobile-menu .navigation > li > span:hover {
+    color: #228B22;
+    background: transparent;
+    padding-left: 8px;
+}
+
+/* Current/active page indicator - color only */
+.mobile-menu .navigation > li.current > a {
+    color: #228B22;
+    background: transparent;
+}
+
+/* Icon styling for nav items */
+.mobile-menu .navigation > li > a svg,
+.mobile-menu .navigation > li > span svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2px;
+    flex-shrink: 0;
+}
+
+/* ============================================
+   DROPDOWN SUB-ITEMS - SIMPLIFIED
+   ============================================ */
 .mobile-menu .navigation li ul {
     list-style: none;
-    padding-left: 15px;
+    padding: 0 0 8px 0;
+    margin: 0 0 0 34px;
+    background: transparent;
+    border-radius: 0;
+    border-left: 2px solid #e8e8e8;
+    display: none;
 }
 
-/* Temporary workaround: keep submenus always visible until React dropdown state is implemented */
-.mobile-menu .navigation li.dropdown > ul {
-    display: block !important;
-    padding-left: 15px;
+.mobile-menu .navigation li ul li {
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
-/* Override social links color for white background */
+.mobile-menu .navigation li ul li a {
+    display: block;
+    padding: 10px 8px 10px 16px;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    border-left: none;
+    transition: color 0.3s ease;
+    line-height: 1.4;
+}
+
+.mobile-menu .navigation li ul li a:hover {
+    color: #228B22;
+    background: transparent;
+    padding-left: 16px;
+}
+
+/* ============================================
+   DROPDOWN CHEVRON INDICATOR
+   ============================================ */
+.mobile-menu .navigation > li > span .chevron {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu .navigation > li > span .chevron.open {
+    transform: rotate(180deg);
+}
+
+/* ============================================
+   SOCIAL LINKS - MINIMAL BOTTOM SECTION
+   ============================================ */
+.mobile-menu .social-links {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.mobile-menu .social-links ul {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 .mobile-menu .social-links li a {
-    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: transparent;
+    color: #999;
+    transition: color 0.3s ease;
+    font-size: 18px;
 }
 
 .mobile-menu .social-links li a:hover {
+    background: transparent;
     color: #228B22;
+    transform: none;
+    box-shadow: none;
 }
 
-/* Override dropdown button color if used */
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+.mobile-menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.mobile-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.mobile-menu::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 2px;
+}
+
+.mobile-menu::-webkit-scrollbar-thumb:hover {
+    background: #228B22;
+}
+
+/* ============================================
+   DROPDOWN TOGGLE (if needed)
+   ============================================ */
 .mobile-menu .navigation li.dropdown .dropdown-btn {
-    color: #222;
-    background: rgba(0,0,0,0.05);
+    color: #999;
+    background: transparent;
+    border-radius: 0;
 }

@@ -1,8 +1,16 @@
 import React, { useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
+import { IconType } from 'react-icons'
+import { IoHomeOutline, IoLayersOutline, IoCalendarOutline, IoImagesOutline, IoInformationCircleOutline, IoMailOutline, IoArrowForwardOutline, IoChevronDown } from 'react-icons/io5'
 import '../styles/mobile-menu.css'
 import '../styles/mobile-header-fix.css'
+
+// Type-safe wrapper for react-icons to fix React 18 + @types/react compatibility
+// Calls icon as function and casts to avoid JSX ReactNode vs Element type conflict
+const NavIcon = ({ Component }: { Component: IconType }): React.ReactElement => {
+    return Component({}) as React.ReactElement;
+};
 
 const Headers: React.FC = () => {
 
@@ -65,8 +73,8 @@ const Headers: React.FC = () => {
                                 <div className="mobile-nav-toggler !m-0 !p-2" onClick={() => setMobileMenuOpen(true)}><span className="icon flaticon-menu-1"></span></div>
 
 
-                                <nav className="main-menu navbar-expand-md navbar-light" style={{display: 'block', visibility: 'visible'}}>
-                                    <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent" style={{display: 'block', visibility: 'visible'}}>
+                                <nav className="main-menu navbar-expand-md navbar-light">
+                                    <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                         <ul className="navigation clearfix">
                                             <li className="current"><Link to="/">Home</Link></li>
 
@@ -114,10 +122,26 @@ const Headers: React.FC = () => {
                     <nav className="menu-box">
                         <div className="nav-logo !py-2"><Link to="/"><img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} style={{maxHeight: "60px"}} alt="" title="" /></Link>
                         </div>
+
+                        {/* Menu Section Label */}
+                        <div className="menu-label">Menu</div>
+
                         <div className="menu-outer">
                             <ul className="navigation clearfix !mt-4">
-                                <li className="current"><Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
-                                <li className="dropdown"><span onClick={() => toggleDropdown('pillars')} className="!uppercase !text-[15px] !font-medium !text-[#228B22]" style={{cursor: 'pointer', display: 'block', padding: '12px 0'}}>Pillars</span>
+                                <li className="current">
+                                    <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+                                        <NavIcon Component={IoHomeOutline} />
+                                        Home
+                                    </Link>
+                                </li>
+                                <li className="dropdown">
+                                    <span onClick={() => toggleDropdown('pillars')} style={{cursor: 'pointer'}}>
+                                        <NavIcon Component={IoLayersOutline} />
+                                        Pillars
+                                        <span className={`chevron ${openDropdown === 'pillars' ? 'open' : ''}`}>
+                                            <NavIcon Component={IoChevronDown} />
+                                        </span>
+                                    </span>
                                     <ul style={{display: openDropdown === 'pillars' ? 'block' : 'none'}}>
                                         <li><Link to="/transformation" onClick={() => setMobileMenuOpen(false)}>Transformative Education and Empowerment</Link></li>
                                         <li><Link to="/climate" onClick={() => setMobileMenuOpen(false)}>Climate Action & Renewable Energy</Link></li>
@@ -125,16 +149,46 @@ const Headers: React.FC = () => {
                                         <li><Link to="/networking" onClick={() => setMobileMenuOpen(false)}>Networking & Partnerships</Link></li>
                                     </ul>
                                 </li>
-                                <li><Link to="/events" onClick={() => setMobileMenuOpen(false)}>Events</Link></li>
-                                <li><Link to="/gallery" onClick={() => setMobileMenuOpen(false)}>Gallery</Link></li>
-                                <li className="dropdown"><span onClick={() => toggleDropdown('about')} className="!uppercase !text-[15px] !font-medium !text-[#228B22]" style={{cursor: 'pointer', display: 'block', padding: '12px 0'}}>About</span>
+                                <li>
+                                    <Link to="/events" onClick={() => setMobileMenuOpen(false)}>
+                                        <NavIcon Component={IoCalendarOutline} />
+                                        Events
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/gallery" onClick={() => setMobileMenuOpen(false)}>
+                                        <NavIcon Component={IoImagesOutline} />
+                                        Gallery
+                                    </Link>
+                                </li>
+                                <li className="dropdown">
+                                    <span onClick={() => toggleDropdown('about')} style={{cursor: 'pointer'}}>
+                                        <NavIcon Component={IoInformationCircleOutline} />
+                                        About
+                                        <span className={`chevron ${openDropdown === 'about' ? 'open' : ''}`}>
+                                            <NavIcon Component={IoChevronDown} />
+                                        </span>
+                                    </span>
                                     <ul style={{display: openDropdown === 'about' ? 'block' : 'none'}}>
                                         <li><Link to="/about" onClick={() => setMobileMenuOpen(false)}>About Us</Link></li>
                                         <li><Link to="/partners" onClick={() => setMobileMenuOpen(false)}>Our Partners</Link></li>
                                     </ul>
                                 </li>
-                                <li><Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link></li>
+                                <li>
+                                    <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+                                        <NavIcon Component={IoMailOutline} />
+                                        Contact
+                                    </Link>
+                                </li>
                             </ul>
+                        </div>
+
+                        {/* Primary CTA Button - Moved after navigation */}
+                        <div className="primary-cta">
+                            <Link to="/donate">
+                                Donate Now
+                                <NavIcon Component={IoArrowForwardOutline} />
+                            </Link>
                         </div>
 
                         <div className="social-links">
