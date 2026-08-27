@@ -341,6 +341,28 @@ const Gallery: React.FC = () => {
             alt: "Malawi Annual Youth Conference"
         },
 
+        // 8b. Global Women's Leadership Network partnership
+        {
+            id: 160,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/partnerships-gwln-session.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Global Women's Leadership Network Session"
+        },
+        {
+            id: 161,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/partnerships-gwln-conference.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "GWLN Lakeshore Annual Conference"
+        },
+
+        // 8c. Behaviour Change
+        {
+            id: 170,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/behavior-change-01.jpg`,
+            categories: ['Behavior Change Catch Up'],
+            alt: "Behavior Change Catch Up"
+        },
+
 
         // 9. Jasmin Girls Empowerment Group (02-15 only, excluding 01, 03, 04)
         {
