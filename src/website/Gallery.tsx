@@ -411,6 +411,27 @@ const Gallery: React.FC = () => {
         },
 
 
+        // 9b. Transformative Education training and empowerment sessions
+        {
+            id: 150,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/transformative-education-01.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Community Empowerment Session"
+        },
+        {
+            id: 151,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/transformative-education-02.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Workplace Empowerment Session"
+        },
+        {
+            id: 152,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/transformative-education-03.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Women's Group Session"
+        },
+
+
         // 10. Community Cleanup Group
         {
             id: 80,
