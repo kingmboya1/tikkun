@@ -275,6 +275,38 @@ const Gallery: React.FC = () => {
             categories: ['Organization and Capacity Building'],
             alt: "Canada DE Graduation"
         },
+        {
+            id: 47,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-08.jpg`,
+            categories: ['Organization and Capacity Building'],
+            alt: "Capacity Building"
+        },
+
+        // 7b. Capacity Building workshops and training sessions
+        {
+            id: 140,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/capacity-building-01.jpg`,
+            categories: ['Organization and Capacity Building'],
+            alt: "Capacity Building Workshop"
+        },
+        {
+            id: 141,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/capacity-building-02.jpg`,
+            categories: ['Organization and Capacity Building'],
+            alt: "Global Women's Leadership Network Session"
+        },
+        {
+            id: 142,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/capacity-building-03.jpg`,
+            categories: ['Organization and Capacity Building'],
+            alt: "Capacity Building Training Session"
+        },
+        {
+            id: 143,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/capacity-building-04.jpg`,
+            categories: ['Organization and Capacity Building'],
+            alt: "Capacity Building Training Session"
+        },
 
 
         // 8. Conf Group
@@ -332,12 +364,6 @@ const Gallery: React.FC = () => {
         {
             id: 63,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-07.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Jasmin Girls Empowerment"
-        },
-        {
-            id: 64,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-08.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
@@ -449,7 +475,7 @@ const Gallery: React.FC = () => {
         {
             id: 91,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/community_3.jpg`,
-            categories: ['Behavior Change Catch Up'],
+            categories: ['Climate Action & Renewable Energy'],
             alt: "Community"
         },
 
@@ -587,10 +613,18 @@ const Gallery: React.FC = () => {
         });
     }, []);
 
-    const categories = ['Behavior Change Catch Up',
+    const allCategories = ['Behavior Change Catch Up',
         'all',
         'Transformative Education & Empowerment',
         'Climate Action & Renewable Energy', 'Organization and Capacity Building', 'Networking and Partnerships'];
+
+    // Only show a filter button if that category actually has photos, so a
+    // button can never open an empty grid. Behavior Change Catch Up is empty
+    // right now (its only photo moved to Climate Action); if a photo is added
+    // back to it later, its button reappears on its own.
+    const categories = allCategories.filter(
+        c => c === 'all' || galleryItems.some(item => item.categories.includes(c))
+    );
     const [activeFilter, setActiveFilter] = useState<string>('all');
 
     const filteredItems = activeFilter === 'all'
