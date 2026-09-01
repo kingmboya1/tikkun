@@ -59,7 +59,7 @@ const Headers: React.FC = () => {
 
                 <div className="header-upper">
                     <div className="auto-container">
-                        <div className="inner-container clearfix !flex !items-center !justify-between !min-h-0 !p-3 md:!block md:!p-0 md:!min-h-[120px]">
+                        <div className="inner-container clearfix">
 
                             <div className="logo-box" style={{backgroundColor: "transparent"}}>
                                 <div className="logo"><Link to="/" title="Tikkun Africa Foundation">
