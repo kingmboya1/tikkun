@@ -27,7 +27,7 @@
 	}
 }
 
-@media only screen and (max-width: 1139px){
+@media only screen and (max-width: 991px){
 	.main-header .header-top .top-left{
 		display: none;
 	}
