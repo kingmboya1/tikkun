@@ -185,8 +185,8 @@ const Home: React.FC = () => {
                     }}>
                         <div>
                             <img
-                                src={`${process.env.PUBLIC_URL}/assets/images/mission.jpg`}
-                                alt="Vision"
+                                src={`${process.env.PUBLIC_URL}/assets/images/dove-emblem.png`}
+                                alt="Dove carrying an olive branch over a sunrise and seedling"
                                 style={{
                                     width: '100%',
                                     height: '380px',
