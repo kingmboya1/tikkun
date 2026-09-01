@@ -59,18 +59,18 @@ const Headers: React.FC = () => {
 
                 <div className="header-upper">
                     <div className="auto-container">
-                        <div className="inner-container clearfix flex items-center justify-between min-h-[100px] px-4">
+                        <div className="inner-container clearfix desktop-flex-header">
 
                             <div className="logo-box" style={{backgroundColor: "transparent"}}>
                                 <div className="logo"><Link to="/" title="Tikkun Africa Foundation">
                                     <br />
-                                    <img className="!h-[46px] md:!h-auto" src={`${process.env.PUBLIC_URL}/assets/images/sticky-logo.png`} alt="Tikkun Africa Foundation" /></Link></div>
+                                    <img className="responsive-logo" src={`${process.env.PUBLIC_URL}/assets/images/sticky-logo.png`} alt="Tikkun Africa Foundation" /></Link></div>
                             </div>
 
 
                             <div className="nav-outer clearfix">
 
-                                <div className="mobile-nav-toggler !m-0 !p-2" onClick={() => setMobileMenuOpen(true)}><span className="icon flaticon-menu-1"></span></div>
+                                <div className="mobile-nav-toggler" style={{margin: 0, padding: '0.5rem'}} onClick={() => setMobileMenuOpen(true)}><span className="icon flaticon-menu-1"></span></div>
 
 
                                 <nav className="main-menu navbar-expand-md navbar-light">
@@ -121,14 +121,14 @@ const Headers: React.FC = () => {
                     <div className="close-btn" onClick={() => setMobileMenuOpen(false)}><span className="icon flaticon-cancel"></span></div>
 
                     <nav className="menu-box">
-                        <div className="nav-logo !py-2"><Link to="/"><img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} style={{maxHeight: "60px"}} alt="" title="" /></Link>
+                        <div className="nav-logo" style={{paddingTop: '0.5rem', paddingBottom: '0.5rem'}}><Link to="/"><img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} style={{maxHeight: "60px"}} alt="" title="" /></Link>
                         </div>
 
                         {/* Menu Section Label */}
                         <div className="menu-label">Menu</div>
 
                         <div className="menu-outer">
-                            <ul className="navigation clearfix !mt-4">
+                            <ul className="navigation clearfix" style={{marginTop: '1rem'}}>
                                 <li className="current">
                                     <Link to="/" onClick={() => setMobileMenuOpen(false)}>
                                         <NavIcon Component={IoHomeOutline} />

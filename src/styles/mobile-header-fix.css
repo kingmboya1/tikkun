@@ -3,10 +3,7 @@
    hiding each page's hero banner underneath it. Hide that bar on mobile
    (matching the existing pattern that already hides the social-links half of
    it at larger breakpoints) and add matching top padding so hero content
-   clears the shorter, now-consistent header height. The logo/hamburger row
-   layout itself is handled with Tailwind !important utility classes
-   directly on the elements in Headers.tsx, since the legacy float-based
-   layout there needs a guaranteed override regardless of CSS specificity. */
+   clears the shorter, now-consistent header height. */
 @media only screen and (max-width: 767px) {
     .main-header .header-top {
         display: none;
@@ -18,17 +15,31 @@
     }
 }
 
-/* On desktop the theme positions the logo absolutely inside a 280px gutter
-   that .inner-container reserves with padding-left. The mobile header work
-   applies a Tailwind `md:!p-0` to that same element, which wiped the gutter
-   and let the nav slide left underneath the logo (a ~230px overlap, with
-   "Home" rendering behind the logo). Restore the gutter above the mobile
-   breakpoint. */
-@media only screen and (min-width: 768px) {
-    .main-header .header-upper .inner-container {
+/* Desktop flexbox header layout for logo and navigation */
+.desktop-flex-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Responsive logo sizing */
+.responsive-logo {
+    height: 46px;
+}
+
+@media (min-width: 768px) {
+    /* On desktop the theme positions the logo absolutely inside a 280px gutter
+       that .inner-container reserves with padding-left. Restore the gutter above 
+       the mobile breakpoint. */
+    .desktop-flex-header {
         padding-left: 280px !important;
         padding-right: 0 !important;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
+    }
+
+    .responsive-logo {
+        height: auto !important;
     }
 }
