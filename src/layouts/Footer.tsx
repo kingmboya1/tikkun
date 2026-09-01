@@ -83,6 +83,12 @@ const Footer: React.FC = () => {
                                             <h5><Link to="/climate">Mombasa Farm Kits</Link></h5>
                                             <div className="date">July 25, 2024</div>
                                         </div>
+
+                                        <div className="news-post">
+                                            <div className="post-thumb"><Link to="/transformation"><img src={`${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-15.jpg`} alt="Jasmin Girls Empowerment" /></Link></div>
+                                            <h5><Link to="/transformation">Jasmin Girls Empowerment</Link></h5>
+                                            <div className="date">July 25, 2024</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
