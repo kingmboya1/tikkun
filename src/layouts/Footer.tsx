@@ -89,21 +89,6 @@ const Footer: React.FC = () => {
 
                         </div>
 
-                        <div className="nav-box clearfix">
-                            <div className="inner clearfix">
-                                <ul className="footer-nav clearfix">
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="/about">About</Link></li>
-                                    <li><Link to="/gallery">Gallery</Link></li>
-                                    <li><Link to="/events">Events</Link></li>
-                                    <li><Link to="/partners">Partners</Link></li>
-                                    <li><Link to="/contact">Contact</Link></li>
-                                </ul>
-
-                                <div className="donate-link"><Link to="/donate" className="theme-btn btn-style-one" data-editable="donate-button"><span className="btn-title">Donate Now</span></Link></div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 

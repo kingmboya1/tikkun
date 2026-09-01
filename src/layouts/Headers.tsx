@@ -100,6 +100,7 @@ const Headers: React.FC = () => {
 
                                             <li><Link to="/contact">Contact</Link></li>
                                             
+                                            <li><Link to="/donate" className="donate-btn">Donate Now</Link></li>
                                         </ul>
                                     </div>
                                 </nav>
