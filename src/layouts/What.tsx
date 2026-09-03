@@ -20,18 +20,6 @@ const What: React.FC = () => {
                                 <h2>How we impact the society?</h2>
                                 <div className="text">Here's how our 4 pillars directly impact the society.</div>
                             </div>
-                            <img
-                                src={`${process.env.PUBLIC_URL}/assets/images/dove-emblem.png`}
-                                alt="Dove carrying an olive branch over a sunrise and seedling"
-                                style={{
-                                    display: 'block',
-                                    width: '100%',
-                                    maxWidth: '380px',
-                                    height: 'auto',
-                                    marginTop: '30px',
-                                    borderRadius: '16px',
-                                }}
-                            />
                         </div>
                     </div>
 

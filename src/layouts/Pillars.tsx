@@ -98,20 +98,26 @@ const Pillars: React.FC = () => {
                                 e.currentTarget.style.boxShadow = '0 10px 40px rgba(0,0,0,0.08)';
                             }}
                         >
-                            {/* Image Container */}
-                            <div style={{ position: 'relative', overflow: 'hidden' }}>
-                                <img
-                                    src={`${process.env.PUBLIC_URL}/assets/images/resource/${pillar.image}`}
-                                    alt={pillar.title}
-                                    style={{
-                                        width: '100%',
-                                        height: '200px',
-                                        objectFit: 'cover',
-                                        transition: 'transform 0.4s ease',
-                                    }}
-                                    onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
-                                    onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                                />
+                            {/* Image Container. The zoom-on-hover needs overflow:hidden to
+                                stay inside the card, but the icon badge below deliberately
+                                hangs 25px past the bottom edge - so the image gets its own
+                                clipping wrapper and the badge sits outside it, otherwise the
+                                badge (and its icon) is sliced in half. */}
+                            <div style={{ position: 'relative' }}>
+                                <div style={{ overflow: 'hidden', lineHeight: 0 }}>
+                                    <img
+                                        src={`${process.env.PUBLIC_URL}/assets/images/resource/${pillar.image}`}
+                                        alt={pillar.title}
+                                        style={{
+                                            width: '100%',
+                                            height: '200px',
+                                            objectFit: 'cover',
+                                            transition: 'transform 0.4s ease',
+                                        }}
+                                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
+                                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                                    />
+                                </div>
                                 {/* Icon Badge */}
                                 <div style={{
                                     position: 'absolute',

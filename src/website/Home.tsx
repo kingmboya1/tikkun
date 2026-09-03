@@ -197,20 +197,6 @@ const Home: React.FC = () => {
                             />
                         </div>
                         <div>
-                            <span style={{
-                                display: 'inline-block',
-                                padding: '8px 20px',
-                                backgroundColor: 'rgba(240, 204, 0, 0.18)',
-                                color: '#7A6000',
-                                borderRadius: '25px',
-                                fontSize: '14px',
-                                fontWeight: 600,
-                                marginBottom: '15px',
-                                textTransform: 'uppercase',
-                                letterSpacing: '1px',
-                            }}>
-                                Our Dream
-                            </span>
                             <h2 style={{
                                 fontSize: '42px',
                                 fontWeight: 700,
