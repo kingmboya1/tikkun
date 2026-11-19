@@ -89,20 +89,6 @@ const Home: React.FC = () => {
                         marginBottom: '80px',
                     }}>
                         <div>
-                            <span style={{
-                                display: 'inline-block',
-                                padding: '8px 20px',
-                                backgroundColor: 'rgba(34, 139, 34, 0.1)',
-                                color: '#228B22',
-                                borderRadius: '25px',
-                                fontSize: '14px',
-                                fontWeight: 600,
-                                marginBottom: '15px',
-                                textTransform: 'uppercase',
-                                letterSpacing: '1px',
-                            }}>
-                                Our Purpose
-                            </span>
                             <h2 style={{
                                 fontSize: '42px',
                                 fontWeight: 700,
