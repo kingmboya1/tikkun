@@ -10,28 +10,37 @@ import '../styles/grid-utils.css';
 
 
 
+const MODAL_DISMISSED_KEY = 'mensDay2026ModalDismissed';
+
 const Home: React.FC = () => {
 
     const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
+        // International Men's Day 2026 poster: shows until end of 20 Nov 2026 (Kenya time)
         const currentDate = new Date();
-        const deadline = new Date('2025-06-04');
+        const deadline = new Date('2026-11-21T00:00:00+03:00');
+        let dismissed = false;
+        try {
+            dismissed = sessionStorage.getItem(MODAL_DISMISSED_KEY) === 'true';
+        } catch { /* storage unavailable */ }
 
-        if (currentDate < deadline) {
+        if (currentDate < deadline && !dismissed) {
             setShowModal(true);
         }
     }, []);
 
     const handleImageClick = () => {
         setShowModal(false);
-        navigate('/events');
+        navigate('/events/international-mens-day-2026');
     };
 
     const handleClose = () => {
         setShowModal(false);
-        sessionStorage.setItem('juneModalDismissed', 'true');
+        try {
+            sessionStorage.setItem(MODAL_DISMISSED_KEY, 'true');
+        } catch { /* storage unavailable */ }
     };
 
     return (
@@ -228,7 +237,7 @@ const Home: React.FC = () => {
                     onClick={handleClose}
                 >
                     <div
-                        className="modal-dialog modal-dialog-centered"
+                        className="modal-dialog modal-dialog-centered modal-lg"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className="modal-content border-0 bg-transparent position-relative">
@@ -251,8 +260,8 @@ const Home: React.FC = () => {
                             </button>
 
                             <img
-                                src={`${process.env.PUBLIC_URL}/assets/images/June.jpg`}
-                                alt="June Event"
+                                src={`${process.env.PUBLIC_URL}/assets/images/events/international-mens-day-2026.jpg`}
+                                alt="International Men's Day 2026"
                                 onClick={handleImageClick}
                                 style={{ cursor: 'pointer', width: '100%', borderRadius: '0.5rem' }}
                             />

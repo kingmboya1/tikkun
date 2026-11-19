@@ -5,6 +5,18 @@ import Search from "../layouts/Search";
 import Footer from "../layouts/Footer";
 import { events } from "../data/events";
 
+const sectionBadge: React.CSSProperties = {
+    display: 'inline-block',
+    padding: '8px 20px',
+    backgroundColor: 'rgba(34,139,34,0.1)',
+    color: '#228B22',
+    borderRadius: '25px',
+    fontSize: '14px',
+    fontWeight: 600,
+    marginBottom: '30px',
+    width: 'fit-content',
+};
+
 const EventDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const event = events.find((e) => e.id === id);
@@ -151,16 +163,130 @@ const EventDetail: React.FC = () => {
                         }}>
                             About This Event
                         </span>
-                        <p style={{
-                            fontSize: '17px',
-                            color: '#444',
-                            lineHeight: 1.85,
-                        }}>
-                            {event.description}
-                        </p>
+                        {event.description.split('\n\n').map((para, i) => (
+                            <p key={i} style={{
+                                fontSize: '17px',
+                                color: '#444',
+                                lineHeight: 1.85,
+                                marginBottom: '18px',
+                            }}>
+                                {para}
+                            </p>
+                        ))}
                     </div>
+                    {event.featuredImage && (
+                        <div style={{ maxWidth: '1000px', margin: '40px auto 0' }}>
+                            <img
+                                src={`${process.env.PUBLIC_URL}/${event.featuredImage}`}
+                                alt={event.title}
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                    display: 'block',
+                                    borderRadius: '16px',
+                                    boxShadow: '0 6px 24px rgba(0,0,0,0.12)',
+                                }}
+                            />
+                        </div>
+                    )}
                 </div>
             </section>
+
+            {/* Videos */}
+            {((event.youtube && event.youtube.length > 0) || (event.videos && event.videos.length > 0)) && (
+                <section style={{ padding: '80px 0', background: '#fff', borderTop: '1px solid #eee' }}>
+                    <div className="auto-container">
+                        <span style={sectionBadge}>Videos</span>
+
+                        {event.youtube?.map((yt) => (
+                            <div key={yt.id} style={{ maxWidth: '900px', margin: '0 auto 40px' }}>
+                                <div style={{
+                                    position: 'relative',
+                                    aspectRatio: '16/9',
+                                    borderRadius: '16px',
+                                    overflow: 'hidden',
+                                    boxShadow: '0 6px 24px rgba(0,0,0,0.12)',
+                                    background: '#000',
+                                }}>
+                                    <iframe
+                                        src={`https://www.youtube-nocookie.com/embed/${yt.id}`}
+                                        title={yt.title}
+                                        loading="lazy"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen
+                                        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}
+                                    />
+                                </div>
+                                <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: 600, color: '#1a1a2e', textAlign: 'center' }}>
+                                    {yt.title}
+                                </p>
+                            </div>
+                        ))}
+
+                        {event.videos && event.videos.length > 0 && (
+                            <div style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))',
+                                gap: '24px',
+                            }}>
+                                {event.videos.map((v) => (
+                                    <div key={v.src}>
+                                        <div style={{
+                                            borderRadius: '16px',
+                                            overflow: 'hidden',
+                                            boxShadow: '0 6px 24px rgba(0,0,0,0.08)',
+                                            background: '#000',
+                                            aspectRatio: '16/9',
+                                        }}>
+                                            <video
+                                                controls
+                                                playsInline
+                                                preload="none"
+                                                poster={v.poster ? `${process.env.PUBLIC_URL}/${v.poster}` : undefined}
+                                                style={{ width: '100%', height: '100%', display: 'block' }}
+                                            >
+                                                <source src={`${process.env.PUBLIC_URL}/${v.src}`} type="video/mp4" />
+                                            </video>
+                                        </div>
+                                        <p style={{ marginTop: '10px', fontSize: '15px', fontWeight: 600, color: '#1a1a2e' }}>
+                                            {v.title}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        {event.links && event.links.length > 0 && (
+                            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '12px', marginTop: '40px' }}>
+                                {event.links.map((l) => (
+                                    <a
+                                        key={l.url}
+                                        href={l.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            gap: '10px',
+                                            padding: '14px 28px',
+                                            backgroundColor: '#f8f9fa',
+                                            color: '#228B22',
+                                            borderRadius: '30px',
+                                            textDecoration: 'none',
+                                            fontWeight: 600,
+                                            fontSize: '15px',
+                                            border: '1px solid #e0e0e0',
+                                        }}
+                                    >
+                                        <span className="fa fa-external-link-alt"></span>
+                                        {l.label}
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </section>
+            )}
 
             {/* Additional Images */}
             {event.additionalImages && event.additionalImages.length > 0 && (
