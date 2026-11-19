@@ -52,6 +52,38 @@ const Gallery: React.FC = () => {
     }, [pageBgSlides.length]);
 
     const galleryItems: GalleryItem[] = [
+        // 0. Breast Cancer Screening Community Walk, 30 Oct 2026 (newest first)
+        {
+            id: 180,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/events/breast-cancer-walk-2026-07.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Breast Cancer Screening Community Walk"
+        },
+        {
+            id: 181,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/events/breast-cancer-walk-2026-01.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Breast Cancer Screening Community Walk"
+        },
+        {
+            id: 182,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/events/breast-cancer-walk-2026-02.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Breast Cancer Screening Community Walk"
+        },
+        {
+            id: 183,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/events/breast-cancer-walk-2026-03.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Breast Cancer Screening Partners"
+        },
+        {
+            id: 184,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/events/breast-cancer-walk-2026-04.jpg`,
+            categories: ['Networking and Partnerships'],
+            alt: "Breast Cancer Screening Tents and Ambulance"
+        },
+
         // 1. Malawi Group
         {
             id: 1,

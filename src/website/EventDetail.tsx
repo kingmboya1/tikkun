@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Headers from "../layouts/Headers";
 import Search from "../layouts/Search";
 import Footer from "../layouts/Footer";
 import { events } from "../data/events";
+import VideoLightbox from "./VideoLightbox";
 
 const sectionBadge: React.CSSProperties = {
     display: 'inline-block',
@@ -20,6 +21,8 @@ const sectionBadge: React.CSSProperties = {
 const EventDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const event = events.find((e) => e.id === id);
+    const [openVideo, setOpenVideo] = useState<number | null>(null);
+    const closeVideo = useCallback(() => setOpenVideo(null), []);
 
     useEffect(() => {
         document.title = event
@@ -229,31 +232,74 @@ const EventDetail: React.FC = () => {
                                 gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))',
                                 gap: '24px',
                             }}>
-                                {event.videos.map((v) => (
+                                {event.videos.map((v, i) => (
                                     <div key={v.src}>
-                                        <div style={{
-                                            borderRadius: '16px',
-                                            overflow: 'hidden',
-                                            boxShadow: '0 6px 24px rgba(0,0,0,0.08)',
-                                            background: '#000',
-                                            aspectRatio: '16/9',
-                                        }}>
-                                            <video
-                                                controls
-                                                playsInline
-                                                preload="none"
-                                                poster={v.poster ? `${process.env.PUBLIC_URL}/${v.poster}` : undefined}
-                                                style={{ width: '100%', height: '100%', display: 'block' }}
-                                            >
-                                                <source src={`${process.env.PUBLIC_URL}/${v.src}`} type="video/mp4" />
-                                            </video>
-                                        </div>
+                                        <button
+                                            type="button"
+                                            onClick={() => setOpenVideo(i)}
+                                            aria-label={`Play video: ${v.title}`}
+                                            style={{
+                                                position: 'relative',
+                                                display: 'block',
+                                                width: '100%',
+                                                padding: 0,
+                                                border: 'none',
+                                                cursor: 'pointer',
+                                                borderRadius: '16px',
+                                                overflow: 'hidden',
+                                                boxShadow: '0 6px 24px rgba(0,0,0,0.08)',
+                                                background: '#000',
+                                                aspectRatio: '16/9',
+                                            }}
+                                        >
+                                            {v.poster && (
+                                                <img
+                                                    src={`${process.env.PUBLIC_URL}/${v.poster}`}
+                                                    alt=""
+                                                    loading="lazy"
+                                                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                                                />
+                                            )}
+                                            <span style={{
+                                                position: 'absolute',
+                                                inset: 0,
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                background: 'rgba(0,0,0,0.25)',
+                                            }}>
+                                                <span style={{
+                                                    width: '68px',
+                                                    height: '68px',
+                                                    borderRadius: '50%',
+                                                    background: '#228B22',
+                                                    color: '#fff',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    fontSize: '26px',
+                                                    paddingLeft: '5px',
+                                                    boxShadow: '0 4px 20px rgba(0,0,0,0.35)',
+                                                }}>
+                                                    &#9654;
+                                                </span>
+                                            </span>
+                                        </button>
                                         <p style={{ marginTop: '10px', fontSize: '15px', fontWeight: 600, color: '#1a1a2e' }}>
                                             {v.title}
                                         </p>
                                     </div>
                                 ))}
                             </div>
+                        )}
+
+                        {event.videos && openVideo !== null && (
+                            <VideoLightbox
+                                videos={event.videos}
+                                index={openVideo}
+                                onClose={closeVideo}
+                                onChange={setOpenVideo}
+                            />
                         )}
 
                         {event.links && event.links.length > 0 && (
