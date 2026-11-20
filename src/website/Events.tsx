@@ -8,6 +8,10 @@ import { events } from '../data/events';
 
 const Events: React.FC = () => {
 
+    useEffect(() => {
+        document.title = "Our Events - Tikkun Africa Foundation";
+    }, []);
+
     const [step, setStep] = useState<number>(0)
     const [title, setTitle] = useState<any>("Our Events")
 

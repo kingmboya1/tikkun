@@ -363,8 +363,8 @@ const Home: React.FC = () => {
 
                     <div className="gallery-item">
                         <div className="image-box">
-                            <figure className="image"><img loading={"lazy"} src="images/various/6.jpg" alt="" /></figure>
-                            <div className="overlay-box"><a href="images/various/6.jpg" className="lightbox-image" data-fancybox="gallery"><span className="icon flaticon-instagram"></span></a></div>
+                            <figure className="image"><img loading={"lazy"} src={`${process.env.PUBLIC_URL}/assets/images/events/breast-cancer-walk-2026-02.jpg`} alt="" /></figure>
+                            <div className="overlay-box"><a href={`${process.env.PUBLIC_URL}/assets/images/events/breast-cancer-walk-2026-02.jpg`} className="lightbox-image" data-fancybox="gallery"><span className="icon flaticon-instagram"></span></a></div>
                         </div>
                     </div>
 

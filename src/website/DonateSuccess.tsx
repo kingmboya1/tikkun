@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Headers from '../layouts/Headers';
 import Footer from '../layouts/Footer';
 import './Donate.css';
 
 const DonateSuccess: React.FC = () => {
+
+    useEffect(() => {
+        document.title = "Thank You - Tikkun Africa Foundation";
+    }, []);
     return (
         <>
             <Headers />

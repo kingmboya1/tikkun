@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Headers from '../layouts/Headers';
 import Footer from '../layouts/Footer';
 import './Donate.css';
 
 const Donate: React.FC = () => {
+
+    useEffect(() => {
+        document.title = "Donate - Tikkun Africa Foundation";
+    }, []);
     const [donationAmount, setDonationAmount] = useState<string>('');
     const [customAmount, setCustomAmount] = useState<string>('');
     const [donorName, setDonorName] = useState<string>('');
@@ -99,12 +103,9 @@ const Donate: React.FC = () => {
                         </div>
                         <div className="col-lg-6">
                             <img 
-                                src={`${process.env.PUBLIC_URL}/assets/images/donate-hero.jpg`} 
-                                alt="Donation Impact" 
+                                src={`${process.env.PUBLIC_URL}/assets/images/gallery/mgandini-primary-school-2026.jpg`}
+                                alt="Pupils at Mgandini Primary School with donated supplies"
                                 className="img-fluid rounded shadow"
-                                onError={(e) => {
-                                    e.currentTarget.src = 'https://via.placeholder.com/600x400/007bff/ffffff?text=Make+a+Difference';
-                                }}
                             />
                         </div>
                     </div>

@@ -93,10 +93,13 @@ const EventDetail: React.FC = () => {
                     height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'center',
+                    // Anchor to the bottom so long titles grow upwards, away from
+                    // the sticky header that overlaps the top of this banner
+                    justifyContent: 'flex-end',
+                    paddingBottom: '56px',
                 }}>
                     <h1 style={{
-                        fontSize: '48px',
+                        fontSize: 'clamp(28px, 4.2vw, 48px)',
                         fontWeight: 700,
                         color: '#fff',
                         marginBottom: '16px',
