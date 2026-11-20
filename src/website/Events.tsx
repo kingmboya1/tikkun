@@ -11,6 +11,23 @@ const Events: React.FC = () => {
     const [step, setStep] = useState<number>(0)
     const [title, setTitle] = useState<any>("Our Events")
 
+    // Rotating header photos from recent events
+    const bannerSlides = [
+        `${process.env.PUBLIC_URL}/assets/images/events/breast-cancer-walk-2026-07.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/mgandini-primary-school-2026.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-01.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-06.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/events/breast-cancer-walk-2026-01.jpg`,
+    ];
+    const [bannerSlide, setBannerSlide] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setBannerSlide(prev => (prev + 1) % bannerSlides.length);
+        }, 4000);
+        return () => clearInterval(timer);
+    }, [bannerSlides.length]);
+
 
     return(
         <>
@@ -18,7 +35,17 @@ const Events: React.FC = () => {
             <Search/>
 
             <section className="page-banner">
-                <div className="image-layer" style={{backgroundImage:`url(${process.env.PUBLIC_URL}/assets/images/background/bg-banner-1.jpg)`}}></div>
+                {bannerSlides.map((slide, index) => (
+                    <div
+                        key={slide}
+                        className="image-layer"
+                        style={{
+                            backgroundImage: `url(${slide})`,
+                            opacity: index === bannerSlide ? 1 : 0,
+                            transition: 'opacity 1.5s ease-in-out',
+                        }}
+                    ></div>
+                ))}
                 <div className="bottom-rotten-curve"></div>
 
                 <div className="auto-container">

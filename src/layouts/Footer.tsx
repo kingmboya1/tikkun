@@ -72,16 +72,29 @@ const Footer: React.FC = () => {
                                     <div className="widget-content">
                                         <h3>Top Projects</h3>
 
+                                        {/* Latest first */}
                                         <div className="news-post">
-                                            <div className="post-thumb"><Link to="/climate"><img src={`${process.env.PUBLIC_URL}/assets/images/climate.jpg`} alt="Ongata Greening Initiative" /></Link></div>
-                                            <h5><Link to="/climate">Ongata Greening Initiative</Link></h5>
-                                            <div className="date">July 25, 2024</div>
+                                            <div className="post-thumb"><Link to="/events/breast-cancer-screening-walk-2026"><img src={`${process.env.PUBLIC_URL}/assets/images/events/breast-cancer-walk-2026-07.jpg`} alt="Free Breast Cancer Screening" /></Link></div>
+                                            <h5><Link to="/events/breast-cancer-screening-walk-2026">Free Breast Cancer Screening</Link></h5>
+                                            <div className="date">October 30, 2026</div>
+                                        </div>
+
+                                        <div className="news-post">
+                                            <div className="post-thumb"><Link to="/climate"><img src={`${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-01.jpg`} alt="Mayor Road Cleanup" /></Link></div>
+                                            <h5><Link to="/climate">Mayor Road Cleanup</Link></h5>
+                                            <div className="date">June 2026</div>
                                         </div>
 
                                         <div className="news-post">
                                             <div className="post-thumb"><Link to="/climate"><img src={`${process.env.PUBLIC_URL}/assets/images/thumb_1.jpg`} alt="Mombasa Farm Kits" /></Link></div>
                                             <h5><Link to="/climate">Mombasa Farm Kits</Link></h5>
                                             <div className="date">August 19, 2025</div>
+                                        </div>
+
+                                        <div className="news-post">
+                                            <div className="post-thumb"><Link to="/climate"><img src={`${process.env.PUBLIC_URL}/assets/images/climate.jpg`} alt="Ongata Greening Initiative" /></Link></div>
+                                            <h5><Link to="/climate">Ongata Greening Initiative</Link></h5>
+                                            <div className="date">July 25, 2024</div>
                                         </div>
 
                                     </div>

@@ -9,6 +9,8 @@ type GalleryItem = {
     categories: string[];
     alt: string;
     orientation?: 'landscape' | 'portrait';
+    /** Posters/flyers: shown in full (never cropped) and two rows tall. */
+    poster?: boolean;
 };
 
 const Gallery: React.FC = () => {
@@ -21,8 +23,7 @@ const Gallery: React.FC = () => {
     const bannerSlides = [
         `${process.env.PUBLIC_URL}/assets/images/gallery.jpg`,
         `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-09.jpg`,
-        `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-15.jpg`,
-        `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-06.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/mgandini-primary-school-2026.jpg`,
         `${process.env.PUBLIC_URL}/assets/images/gallery/women_5.jpg`,
     ];
     const [bannerSlide, setBannerSlide] = useState(0);
@@ -37,7 +38,6 @@ const Gallery: React.FC = () => {
     const pageBgSlides = [
         `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-04.jpg`,
         `${process.env.PUBLIC_URL}/assets/images/gallery/climate_3.jpg`,
-        `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-06.jpg`,
         `${process.env.PUBLIC_URL}/assets/images/gallery/community-cleanup-06.jpg`,
         `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_after_3.jpg`,
         `${process.env.PUBLIC_URL}/assets/images/gallery/women_3.jpg`,
@@ -275,18 +275,6 @@ const Gallery: React.FC = () => {
 
         // 6. Tollen Children Group
         {
-            id: 41,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_children_4.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen Children"
-        },
-        {
-            id: 42,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_children_6.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Tollen Children"
-        },
-        {
             id: 43,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/tollen_children_7.jpg`,
             categories: ['Transformative Education & Empowerment'],
@@ -384,7 +372,8 @@ const Gallery: React.FC = () => {
             id: 161,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/partnerships-gwln-conference.jpg`,
             categories: ['Networking and Partnerships'],
-            alt: "GWLN Lakeshore Annual Conference"
+            alt: "GWLN Lakeshore Annual Conference",
+            poster: true
         },
 
         // 8c. Behaviour Change
@@ -406,12 +395,6 @@ const Gallery: React.FC = () => {
         {
             id: 61,
             imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-05.jpg`,
-            categories: ['Transformative Education & Empowerment'],
-            alt: "Jasmin Girls Empowerment"
-        },
-        {
-            id: 62,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-06.jpg`,
             categories: ['Transformative Education & Empowerment'],
             alt: "Jasmin Girls Empowerment"
         },
@@ -459,9 +442,15 @@ const Gallery: React.FC = () => {
         },
         {
             id: 71,
-            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-15.jpg`,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/mgandini-primary-school-2026.jpg`,
             categories: ['Transformative Education & Empowerment'],
-            alt: "Jasmin Girls Empowerment"
+            alt: "Mgandini Primary School"
+        },
+        {
+            id: 185,
+            imageUrl: `${process.env.PUBLIC_URL}/assets/images/gallery/transformative-education-04.jpg`,
+            categories: ['Transformative Education & Empowerment'],
+            alt: "Puberty education session with pupils"
         },
 
 
@@ -800,6 +789,7 @@ const Gallery: React.FC = () => {
                         <div style={{
                             display: 'grid',
                             gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                            gridAutoFlow: 'row dense',
                             gap: '20px',
                         }}>
                             {filteredItems.map(item => (
@@ -809,7 +799,10 @@ const Gallery: React.FC = () => {
                                         position: 'relative',
                                         overflow: 'hidden',
                                         borderRadius: '12px',
-                                        aspectRatio: '4/3',
+                                        // Posters take two rows so their text is never cut off
+                                        ...(item.poster
+                                            ? { gridRow: 'span 2', aspectRatio: '5/7', background: '#fff' }
+                                            : { aspectRatio: '4/3' }),
                                         cursor: 'pointer',
                                         boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
                                         transition: 'transform 0.3s ease, box-shadow 0.3s ease',
@@ -829,7 +822,8 @@ const Gallery: React.FC = () => {
                                         style={{
                                             width: '100%',
                                             height: '100%',
-                                            objectFit: 'cover',
+                                            objectFit: item.poster ? 'contain' : 'cover',
+                                            display: 'block',
                                             transition: 'transform 0.3s ease',
                                         }}
                                     />

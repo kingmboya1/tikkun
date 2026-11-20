@@ -256,11 +256,11 @@ const Climate: React.FC = () => {
                                 reopened safe play space for neighborhood children.</p>
                             <p style={{ marginBottom: '20px' }}>Collected waste was disposed of responsibly, in line with environmental safety
                                 standards. The initiative reflects the strength of community partnerships
-                                working toward a shared goal, and reinforces the cleanliness and civic pride
+                                working toward a shared goal. It reinforces the cleanliness and civic pride
                                 that residents already hold as part of their everyday household norms.</p>
                             <p style={{ marginBottom: '20px' }}>Beyond immediate cleanup efforts, volunteers demonstrated practical recycling
                                 techniques by transforming collected waste materials into functional brooms.
-                                This hands-on session showed residents how to repurpose materials for everyday
+                                This hands-on session showed residents how to recycle materials for everyday
                                 household use, extending the initiative's impact beyond a single cleanup event
                                 and reinforcing the message of sustainability through ongoing behavior change.</p>
                         </div>

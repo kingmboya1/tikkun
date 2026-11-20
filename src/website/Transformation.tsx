@@ -11,9 +11,9 @@ const Transformation: React.FC = () => {
     }, [])
 
     const heroSlides = [
-        `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-15.jpg`,
-        `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-02.jpg`,
-        `${process.env.PUBLIC_URL}/assets/images/gallery/greening-drive-07.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/mgandini-primary-school-2026.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/transformative-education-04.jpg`,
+        `${process.env.PUBLIC_URL}/assets/images/gallery/jasmin-girls-empowerment-08.jpg`,
     ];
     const [heroSlide, setHeroSlide] = useState(0);
 
